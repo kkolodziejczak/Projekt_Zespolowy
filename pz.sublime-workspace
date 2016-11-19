@@ -1,0 +1,2422 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"tex",
+				"textContent"
+			],
+			[
+				"sud",
+				"sudokuResults"
+			],
+			[
+				"sudo",
+				"sudokuArray"
+			],
+			[
+				"le",
+				"length"
+			],
+			[
+				"Sudo",
+				"SudokuState"
+			],
+			[
+				"this",
+				"this.h\t(Program.cs)"
+			],
+			[
+				"psuh",
+				"push"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"re",
+				"redraw"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"rel",
+				"relative"
+			],
+			[
+				"elem",
+				"elements"
+			],
+			[
+				"element",
+				"elements\t(paper-card-repeater.html)"
+			],
+			[
+				"even",
+				"events"
+			],
+			[
+				"console",
+				"console.log"
+			],
+			[
+				"ac",
+				"action"
+			],
+			[
+				"sty",
+				"stylesheet\t(index.haml)"
+			],
+			[
+				"node_",
+				"node_modules\t(package.json)"
+			],
+			[
+				"passportSe",
+				"passportSetup"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"afr",
+				"afterCreate"
+			],
+			[
+				"loc",
+				"local\t(AuthController.js)"
+			],
+			[
+				"pro",
+				"provider"
+			],
+			[
+				"de",
+				"default\t(http.js)"
+			],
+			[
+				"authent",
+				"authenticated\t(sessionAuth.js)"
+			],
+			[
+				"PC_SUP",
+				"PC_SUPER_LEVEL2"
+			],
+			[
+				"ser",
+				"service\t(art112_ansible_learn.md)"
+			],
+			[
+				"edi",
+				"edit-json.coffee"
+			],
+			[
+				"print",
+				"printKeys"
+			],
+			[
+				"obj",
+				"object"
+			],
+			[
+				"unde",
+				"undefined"
+			],
+			[
+				"arg",
+				"argv"
+			],
+			[
+				"conso",
+				"console.log"
+			],
+			[
+				"send",
+				"sendemail"
+			],
+			[
+				"webele",
+				"webelements_paths"
+			],
+			[
+				"source",
+				"sourcePaths"
+			],
+			[
+				"rela",
+				"relative\t(gulpfile.coffee)"
+			],
+			[
+				"sou",
+				"source_path"
+			],
+			[
+				"Re",
+				"RegExp\t(gulpfile.coffee)"
+			],
+			[
+				"dat",
+				"dataentry4\t(gulpfile.coffee)"
+			],
+			[
+				"bower",
+				"bowerPath"
+			],
+			[
+				"prod",
+				"productionMode\t(gulpfile.coffee)"
+			],
+			[
+				"bowe",
+				"bowerPath"
+			],
+			[
+				"dest",
+				"destName"
+			],
+			[
+				"start",
+				"start_path"
+			],
+			[
+				"env",
+				"environment"
+			],
+			[
+				"pull",
+				"pull_with_dep"
+			],
+			[
+				"k",
+				"kontrolery"
+			],
+			[
+				"repo",
+				"repo_name\t(92_webelement_action.sh)"
+			],
+			[
+				"iuw__",
+				"iuw_____install_hack__________________________00"
+			],
+			[
+				"al",
+				"alias"
+			],
+			[
+				"im",
+				"im_webelements_compiler\t(to do.todo)"
+			],
+			[
+				"set",
+				"setup_reload_frontend\t(to do.todo)"
+			],
+			[
+				"im_",
+				"im_webelements"
+			],
+			[
+				"node_e",
+				"node_express_polymer"
+			],
+			[
+				"sour",
+				"sourcePath"
+			],
+			[
+				"com",
+				"components"
+			],
+			[
+				"compo",
+				"component_template"
+			],
+			[
+				"parse",
+				"parse_ip"
+			],
+			[
+				"haml",
+				"haml"
+			],
+			[
+				"mje",
+				"miejsca"
+			],
+			[
+				"Inst",
+				"InstantPosts"
+			],
+			[
+				"fe",
+				"fetchAll"
+			],
+			[
+				"inde",
+				"indeksie\t(componentFinder.js)"
+			],
+			[
+				"result",
+				"resultElem"
+			],
+			[
+				"insta",
+				"instagramLink\t(instagramLink.js)"
+			],
+			[
+				"resul",
+				"results"
+			],
+			[
+				"met",
+				"method"
+			],
+			[
+				"meto",
+				"metode"
+			],
+			[
+				"res",
+				"result"
+			],
+			[
+				"cono",
+				"console.log\t(index.js)"
+			],
+			[
+				"promi",
+				"promises"
+			],
+			[
+				"value",
+				"values"
+			],
+			[
+				"test",
+				"testMethod"
+			],
+			[
+				"getPo",
+				"getPost\t(app-wp.js)"
+			],
+			[
+				"stri",
+				"strict\t(parser.js)"
+			],
+			[
+				"ad",
+				"addres"
+			],
+			[
+				"Use",
+				"Users"
+			],
+			[
+				"req",
+				"require"
+			],
+			[
+				"prot",
+				"protocol\t(index.js)"
+			],
+			[
+				"transi",
+				"transform-origin"
+			],
+			[
+				"sect",
+				"section\t(index.ejs)"
+			],
+			[
+				"hide",
+				"hide-view-card\t(im-view-card.haml)"
+			],
+			[
+				"neo",
+				"neon-animated-pages\t(dashboard.ejs)"
+			],
+			[
+				"curren",
+				"currentPost\t(app-wp.js)"
+			],
+			[
+				"he",
+				"height"
+			],
+			[
+				"file",
+				"files"
+			],
+			[
+				"import",
+				"imports.html\t(gulpfile.js)"
+			],
+			[
+				"string",
+				"stringToSrc"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"comp",
+				"compile"
+			],
+			[
+				"co",
+				"console"
+			],
+			[
+				"mat",
+				"match"
+			],
+			[
+				"for",
+				"for\tfor (…) {…}"
+			],
+			[
+				"dev",
+				"devMode"
+			],
+			[
+				"er",
+				"error"
+			],
+			[
+				"func",
+				"functions\t(README.md)"
+			],
+			[
+				"x",
+				"xs_and_sm\t(local.scss)"
+			],
+			[
+				"node",
+				"node_modules\t(README.md)"
+			],
+			[
+				"cre",
+				"create_tar"
+			],
+			[
+				"boo",
+				"bootstrap\t(README.md)"
+			],
+			[
+				"remove",
+				"removeClass"
+			],
+			[
+				"mid",
+				"middle"
+			],
+			[
+				"sho",
+				"short"
+			],
+			[
+				"aut",
+				"autorenew\t(global.js.coffee)"
+			],
+			[
+				"Wył",
+				"Wyłączone"
+			],
+			[
+				"abs",
+				"absolute"
+			],
+			[
+				"fade",
+				"fadeIn"
+			],
+			[
+				"previ",
+				"previous"
+			],
+			[
+				"prefe",
+				"preventDefault"
+			],
+			[
+				"ani",
+				"animation"
+			],
+			[
+				"medi",
+				"medium"
+			],
+			[
+				"inl",
+				"inlineCss\t(global.js.coffee)"
+			],
+			[
+				"tran",
+				"transform"
+			],
+			[
+				"ele",
+				"element"
+			],
+			[
+				"dis",
+				"distance"
+			],
+			[
+				"in",
+				"index"
+			],
+			[
+				"add",
+				"addClass"
+			],
+			[
+				"appe",
+				"appendTo"
+			],
+			[
+				"delta",
+				"deltaX"
+			],
+			[
+				"time",
+				"timeout"
+			],
+			[
+				"hidd",
+				"hidding\t(utility.js.coffee)"
+			],
+			[
+				"fo",
+				"forin\tfor … in … done"
+			],
+			[
+				"has",
+				"hasClass"
+			],
+			[
+				"margin-r",
+				"margin-right"
+			],
+			[
+				"sc",
+				"scroll},400"
+			],
+			[
+				"if",
+				"if\tIf"
+			],
+			[
+				"touch",
+				"touchmove"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"move",
+				"File: Move"
+			],
+			[
+				"re",
+				"File: Rename"
+			],
+			[
+				"du",
+				"File: Duplicate"
+			],
+			[
+				"d",
+				"File: Duplicate"
+			],
+			[
+				"c#",
+				"Set Syntax: C#"
+			],
+			[
+				"bash",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"close",
+				"File: Close All"
+			],
+			[
+				"jav",
+				"Set Syntax: JavaScript Next"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript Next"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"uppe",
+				"Convert Case: Upper Case"
+			],
+			[
+				"de",
+				"File: Delete"
+			],
+			[
+				"pla",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"mov",
+				"File: Move"
+			],
+			[
+				"haml",
+				"Set Syntax: Ruby Haml"
+			],
+			[
+				"ren",
+				"File: Rename"
+			],
+			[
+				"dif",
+				"Git: Diff Current File"
+			],
+			[
+				"git c",
+				"Git: Log Current File"
+			],
+			[
+				"dele",
+				"File: Delete"
+			],
+			[
+				"delet",
+				"File: Delete"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"cofeeh",
+				"Set Syntax: Coffee Haml"
+			],
+			[
+				"del",
+				"File: Delete"
+			],
+			[
+				"git comm",
+				"Git: Quick Commit (current file)"
+			],
+			[
+				"commi",
+				"Git: Commit"
+			],
+			[
+				"ej",
+				"Set Syntax: EJS (<% and %>)"
+			],
+			[
+				"jsne",
+				"Set Syntax: JavaScript Next"
+			],
+			[
+				"upper",
+				"Convert Case: Upper Case"
+			],
+			[
+				"lwoe",
+				"Convert Case: Lower Case"
+			],
+			[
+				"ash",
+				"Git: Add Selected Hunk"
+			],
+			[
+				"bahs",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"perl",
+				"Set Syntax: Perl"
+			],
+			[
+				"late",
+				"Set Syntax: LaTeX"
+			],
+			[
+				"mo",
+				"File: Move"
+			],
+			[
+				"diff",
+				"Git: Diff Current File"
+			],
+			[
+				"git log",
+				"Git: Log Current File"
+			],
+			[
+				"stat",
+				"Git: Status"
+			],
+			[
+				"yam",
+				"Set Syntax: YAML"
+			],
+			[
+				"git b",
+				"Git: Blame"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"dup",
+				"File: Duplicate"
+			],
+			[
+				"git hce",
+				"Git: Checkout Current File"
+			],
+			[
+				"git che",
+				"Git: Checkout Current File"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"git show",
+				"Git: Show Current File"
+			],
+			[
+				"git sho",
+				"Git: Show Current File"
+			],
+			[
+				"git chec",
+				"Git: Checkout Current File"
+			],
+			[
+				"git hsow",
+				"Git: Show Current File"
+			],
+			[
+				"enabl",
+				"SublimeLinter: Enable Linter"
+			],
+			[
+				"terminal",
+				"Terminal: Open"
+			],
+			[
+				"syntaxno",
+				"Set Syntax: EditorConfig"
+			],
+			[
+				"synax pla",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"syntax log",
+				"Set Syntax: LaTeX Log"
+			],
+			[
+				"git fiff",
+				"Git: Diff Current File"
+			],
+			[
+				"git ce",
+				"Git: Checkout Current File"
+			],
+			[
+				"git lgo",
+				"Git: Log Current File"
+			],
+			[
+				"git bla",
+				"Git: Blame"
+			],
+			[
+				"coffe",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"jasv",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"jas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"di",
+				"Git: Diff Current File"
+			],
+			[
+				"pack li",
+				"Package Control: List Packages"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"git pu",
+				"Git: Push"
+			],
+			[
+				"git pull",
+				"Git: Pull"
+			],
+			[
+				"cof",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"duf",
+				"Git: Diff Current File"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"lint",
+				"SublimeLinter: Toggle Linter"
+			],
+			[
+				"enab",
+				"Package Control: Enable Package"
+			],
+			[
+				"lis pack",
+				"Package Control: List Packages"
+			],
+			[
+				"lispa",
+				"Package Control: List Packages"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"pack l",
+				"Package Control: List Packages"
+			],
+			[
+				"git sta",
+				"Git: Status"
+			],
+			[
+				"listpac",
+				"Package Control: List Packages"
+			],
+			[
+				"plain",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"log",
+				"Set Syntax: LaTeX Log"
+			],
+			[
+				"git dif",
+				"Git: Diff Current File"
+			],
+			[
+				"disab",
+				"Package Control: Disable Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"git p",
+				"Git: Push"
+			],
+			[
+				"up",
+				"Convert Case: Upper Case"
+			],
+			[
+				"git blam",
+				"Git: Blame"
+			],
+			[
+				"lintner",
+				"SublimeLinter: Enable Linter"
+			],
+			[
+				"previe",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"git hceck",
+				"Git: Checkout Current File"
+			],
+			[
+				"mar",
+				"Set Syntax: Markdown"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"setmar",
+				"Set Syntax: Markdown"
+			],
+			[
+				"semark",
+				"Set Syntax: MultiMarkdown"
+			],
+			[
+				"pack d",
+				"Package Control: Disable Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"setsyntax mar",
+				"Set Syntax: Markdown"
+			],
+			[
+				"pack remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"set syntax mar",
+				"Set Syntax: Markdown"
+			],
+			[
+				"html2",
+				"HTML2Haml: Convert selection"
+			],
+			[
+				"git pus",
+				"Git: Push"
+			],
+			[
+				"en",
+				"Package Control: Enable Package"
+			],
+			[
+				"git stas",
+				"Git: Stash Apply"
+			],
+			[
+				"git stash",
+				"Git: Stash Changes"
+			],
+			[
+				" dele",
+				"File: Delete"
+			],
+			[
+				"git cch",
+				"Git: Checkout Current File"
+			],
+			[
+				"git",
+				"Git: Commit history"
+			],
+			[
+				"gitcur",
+				"Git: Log Current File"
+			],
+			[
+				"git cur",
+				"Git: Log Current File"
+			],
+			[
+				"newfolder",
+				"File: New Folder Relative to Current View"
+			],
+			[
+				"lin",
+				"SublimeLinter: Next Error"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"upp",
+				"Convert Case: Upper Case"
+			],
+			[
+				"git cu",
+				"Git: Log Current File"
+			],
+			[
+				"git ",
+				"Git: Commit history"
+			],
+			[
+				"git check",
+				"Git: Checkout Current File"
+			],
+			[
+				"proje",
+				"Project: Edit"
+			],
+			[
+				"CLOSE",
+				"Project: Close"
+			],
+			[
+				"ma",
+				"Set Syntax: Markdown"
+			],
+			[
+				"syntask",
+				"Set Syntax: Tasks"
+			],
+			[
+				"pac lis",
+				"Package Control: List Packages"
+			],
+			[
+				"ryb",
+				"Set Syntax: Ruby Haml"
+			],
+			[
+				"rub",
+				"Set Syntax: Ruby Haml"
+			],
+			[
+				"ena",
+				"Package Control: Enable Package"
+			],
+			[
+				"list pac",
+				"Package Control: List Packages"
+			],
+			[
+				"ruby",
+				"Set Syntax: Ruby Haml"
+			],
+			[
+				"ruyb",
+				"Set Syntax: Ruby Haml"
+			],
+			[
+				"git com",
+				"Git: Commit"
+			]
+		],
+		"width": 601.0
+	},
+	"console":
+	{
+		"height": 298.0,
+		"history":
+		[
+			"self.window.active_view()",
+			"current_date",
+			"print \"No activity in the past 1000ms\"  ",
+			"print \"siema\"",
+			"print 'siema';",
+			"print 'siema'",
+			"print siema",
+			"print a",
+			"a= str('siema\\n')",
+			"print a",
+			"a= str('siema')",
+			"str('siema')",
+			"str('a')",
+			"print 'siema'",
+			"print",
+			"print \"siema\"",
+			"print siema",
+			"p siema",
+			"0==0",
+			"1==0",
+			"subprocess.call(\"source $HOME/.zshenv; source $im_base_path/im_admins/im_aliases/53_copy_here_last_print_screened_photo.sh im_admins true\",shell=True,executable=\"/bin/zsh\")",
+			"view.run_command(\"copy_last_screenshot\")",
+			"view.run_command(\"copy_last_screen_shot\")",
+			"subprocess.call(\"source $HOME/.zshenv; source $im_base_path/im_admins/im_aliases/53_copy_here_last_print_screened_photo.sh im_admins true\",shell=True,executable=\"/bin/zsh\")",
+			"subprocess.call(\"source $HOME/.zshenv; source $im_base_path/im_admins/im_aliases/53_copy_here_last_print_screened_photo.sh im_admins\",shell=True,executable=\"/bin/zsh\")",
+			"subprocess.call(\"source $HOME/.zshenv; source $im_base_path/im_admins/im_aliases/53_copy_here_last_print_screened_photo.sh im_admins true\",shell=True,executable=\"/bin/zsh\")",
+			"subprocess.call(\"source $HOME/.zshenv; source $im_base_path/im_admins/im_aliases/53_copy_here_last_print_screened_photo.sh im_admins\",shell=True,executable=\"/bin/zsh\")",
+			"import subprocess",
+			"subprocess.call(\"source $HOME/.zshenv; source $im_base_path/im_admins/im_aliases/53_copy_here_last_print_screened_photo.sh im_admins\",shell=True,executable=\"/bin/zsh\")",
+			"subprocess.check_output(\"source $HOME/.zshenv; echo $im_base_path/im_admins/im_aliases/53_copy_here_last_print_screened_photo.sh im_admins\",shell=True,executable=\"/bin/zsh\")",
+			"subprocess.check_output(\"source $HOME/.zshenv; echo $im_base_path/im_admins/im_aliasis;\",shell=True,executable=\"/bin/zsh\")",
+			"subprocess.check_output(\"source $HOME/.zshenv; echo $im_base_path;\",shell=True,executable=\"/bin/zsh\")",
+			"subprocess.check_output(\"source $HOME/.zshrc; echo $im_base_path;\",shell=True,executable=\"/bin/zsh\")",
+			"subprocess.check_output(\"source $HOME/.zshrc;\",shell=True,executable=\"/bin/zsh\")",
+			"subprocess.check_output(\"source $HOME/.zshrc\",shell=True,executable=\"/bin/zsh\")",
+			"subprocess.check_output(\"ps\",shell=True,executable=\"/bin/zsh\")",
+			"subprocess.check_output(\"node\",shell=True,executable='/bin/zsh')",
+			"subprocess.check_output(\"gss\",shell=True,executable='/bin/zsh')",
+			"subprocess.check_output(\"ipw00_________________________start_______________________00\",shell=True,executable='/bin/zsh')",
+			"subprocess.check_output(\"ls\",shell=True,executable='/bin/zsh')",
+			"subprocess.check_output(\"echo $im_base_path\",shell=True,executable='/bin/zsh')",
+			"subprocess.check_output(\"echo kuba\",shell=True,executable='/bin/zsh')",
+			"subprocess.call(\"echo kuba\",shell=True,executable='/bin/zsh')",
+			"os.system(\"google-chrome ${YELLOW}\")",
+			"os.system(\"google-chrome $im_base_path\")",
+			"os.system(\"google-chrome $im_base_path\", shell=True)",
+			"os.system(\"google-chrome $im_base_path\")",
+			"os.system(\"google-chrome $HOME\")",
+			"os.system(\"echo $HOME\")",
+			"import os",
+			"subprocess.check_output([\"source $HOME/.zshrc && echo $im_base_path aa\"], shell=True)",
+			"subprocess.check_output([\"source $HOME/.zshrc; echo $im_base_path aa\"], shell=True)",
+			"subprocess.check_output([\"source $HOME/.zshrc; echo $im_base_path\"], shell=True)",
+			"subprocess.check_output([\"$HOME\"], shell=True)",
+			"subprocess.check_output([\"google-chrome $HOME\"], shell=True)",
+			"subprocess.check_output([\"google-chrome $im_bash_path\"], shell=True)",
+			"subprocess.check_output([\"google-chrome $HOME\"], shell=True)",
+			"subprocess.check_output([\"google-chrome $cpa\"], shell=True)",
+			"subprocess.check_output([\"google-chrome $cp\"], shell=True)",
+			"subprocess.check_output([\"google-chrome $PWD\"], shell=True)",
+			"subprocess.check_output([\"google-chrome http://wp.pl\"], shell=True)",
+			"subprocess.check_output([\"google-chrome\", \"http://wp.pl\"], shell=True)",
+			"subprocess.check_output([\"google-chrome\", \"aaa\"], shell=True)",
+			"subprocess.check_output([\"google-chrome\", \"~/\"], shell=True)",
+			"subprocess.check_output([\"google-chrome\", \"\"], shell=True)",
+			"subprocess.check_output([\"echo\", \"~/a\"], shell=True)",
+			"subprocess.check_output([\"echo\", \"~/\"], shell=True)",
+			"subprocess.check_output([\"echo\", \"$path\"], shell=True)",
+			"subprocess.check_output([\"echo\", \"$PWD\"], shell=True)",
+			"subprocess.check_output([\"echo\", \"$PWD\"], shell=True, universal_newlines=True)",
+			"subprocess.check_output([\"echo\", \"$PWD\"], universal_newlines=True)",
+			"subprocess.check_output([\"echo\", \"$PWD\"], universal_newlines=True, shell=True)",
+			"subprocess.check_output([\"echo\", \"'simea'\"], universal_newlines=True, shell=True)",
+			"subprocess.check_output([\"echo\", \"simea\"], universal_newlines=True, shell=True)",
+			"subprocess.check_output([\"ls\", \"-l\"], universal_newlines=True, shell=True)",
+			"subprocess.check_output([\"ls\", \"a\"], universal_newlines=True, shell=True)",
+			"subprocess.check_output([\"ls\", \"\"], universal_newlines=True, shell=True)",
+			"subprocess.check_output([\"ls\", \"l\"], universal_newlines=True, shell=True)",
+			"subprocess.check_output([\"echo\", \"~/\"], universal_newlines=True, shell=True)",
+			"subprocess.check_output([\"echo\", \".\"], universal_newlines=True, shell=True)",
+			"subprocess.check_output([\"echo\", \".\"], universal_newlines=True)",
+			"subprocess.check_output([\"echo\", \"~/\"], universal_newlines=True)",
+			"subprocess.check_output([\"echo\", \"kuba!\"], universal_newlines=True)",
+			"subprocess.check_output([\"echo $path\"], universal_newlines=True)",
+			"subprocess.check_output([\"echo\", \"$path\"], universal_newlines=True)",
+			"subprocess.check_output([\"echo\", \"kuba!\"], universal_newlines=True)",
+			"subprocess.check_output([\"echo\", \"Hello World!\"], universal_newlines=True)",
+			"subprocess.check_output([\"echo\", \"Hello World!\"], universal_newlines=True",
+			"subprocess.check_output([\"echo\", \"siema\"])",
+			"subprocess.check_output([\"echo\", \"$PWD\"])",
+			"subprocess.check_output([\"echo\", \"$cp\"])",
+			"subprocess.check_output([\"echo\", \"Hello World!\"])",
+			"import subprocess; subprocess.check_output([\"echo\", \"Hello World!\"])",
+			"import subprocess; subprocess.call([\"echo $im_base_path\"], shell=True)",
+			"import subprocess; subprocess.call([\"google-chrome $im_base_path\"], shell=True)",
+			"view.run_command(\"current_date\")",
+			"view.run_command(\"example\")",
+			"now = datetime.datetime.now(); now.strftime(\"[%Y-%m-%d %H:%M]\")",
+			"now = datetime.datetime.now(); now.strftime(\"%Y-%m-%d %H:%M\")",
+			"now = datetime.datetime.now(); now.strftime(\"%d %Y-%m-%d %H:%M\")",
+			"now = datetime.datetime.now(); now.strftime(\"%dd %Y-%m-%d %H:%M\")",
+			"now = datetime.datetime.now(); now.strftime(\"%D %Y-%m-%d %H:%M\")",
+			"now = datetime.datetime.now(); now.strftime(\"%Y-%m-%d %H:%M\")",
+			"import datetime",
+			"view.run_command(\"example\")",
+			"now.strftime(\"%Y-%m-%d %H:%M\")",
+			"now = datetime.datetime.now()",
+			"now.strftime(\"%Y-%m-%d %H:%M\")",
+			"str(datetime.datetime.now())",
+			"datetime.datetime.now()",
+			"import datetime",
+			"datetime.datetime.now()",
+			"date",
+			"view.run_command(\"install_package\")",
+			"subprocess.call([\"google-chrome $PWD\"], shell=True)",
+			"subprocess.call([\"echo siema > ~/kuba && nautilus ~/\"], shell=True)",
+			"subprocess.call([\"google-chrome $PWD\"], shell=True)",
+			"subprocess.call([\"google-chrome\"], shell=True)",
+			"subprocess.call([\"echo siema > kuba && nautilus .\"], shell=True)",
+			"subprocess.call([\"echo siema > kuba && subl kuba\"])",
+			"subprocess.call([\"echo siema > kuba && subl kuba\"], shell=True)",
+			"subprocess.call([\"echo siema\"], shell=True)",
+			"subprocess.call([\"echo\", i], shell=True)",
+			"subprocess.call([\"echo\", \"siema\"], shell=True)",
+			"ubprocess.call([\"echo\", \"siema\"], shell=True)",
+			"import subprocess",
+			"subprocess",
+			"view.keys"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/kuba/studia/pz"
+	],
+	"file_history":
+	[
+		"/home/kuba/studia/wdsi/Laboratory1/Laboratory1/State.cs",
+		"/home/kuba/studia/wdsi/sudoku/index.html",
+		"/home/kuba/studia/wdsi/sudoku/main.js",
+		"/home/kuba/studia/wdsi/sudoku/classes/AStarSearch.js",
+		"/home/kuba/studia/wdsi/sudoku/classes/State.js",
+		"/home/kuba/studia/wdsi/sudoku/renderer.js",
+		"/home/kuba/studia/wdsi/przykladowe",
+		"/home/kuba/studia/wdsi/sudoku/classes/SudokuState.js",
+		"/home/kuba/studia/wdsi/sudoku/classes/Program.js",
+		"/home/kuba/studia/wdsi/sudoku/node_modules/es-collections/PriorityQueue.js",
+		"/home/kuba/studia/wdsi/Laboratory1/Laboratory1/AStarSearch.cs",
+		"/home/kuba/studia/wdsi/Dockerfile",
+		"/home/kuba/studia/wdsi/index.js",
+		"/home/kuba/studia/wdsi/Laboratory1/Laboratory1/node/State.js",
+		"/home/kuba/studia/wdsi/Laboratory1/Laboratory1/node/Program.js",
+		"/home/kuba/studia/wdsi/Laboratory1/Laboratory1/node/AStarSearch.js",
+		"/home/kuba/studia/wdsi/Laboratory1/Laboratory1/node/SudokuSearch.js",
+		"/home/kuba/studia/wdsi/Laboratory1/Laboratory1/node/SudokuState.js",
+		"/home/kuba/studia/wdsi/Laboratory1/Laboratory1/IState.cs",
+		"/home/kuba/studia/wdsi/Laboratory1/Laboratory1/node/SudokuSearch2.js",
+		"/home/kuba/studia/wdsi/Laboratory1/Laboratory1/node/State2.js",
+		"/home/kuba/studia/wdsi/Laboratory1/Laboratory1/SudokuSearch.cs",
+		"/home/kuba/studia/wdsi/Laboratory1/Laboratory1/Program.cs",
+		"/home/kuba/studia/wdsi/Laboratory1/Laboratory1/SudokuState.cs",
+		"/home/kuba/studia/wdsi/docker-compose.yml",
+		"/home/kuba/studia/wdsi/docker-compose",
+		"/home/kuba/studia/wdsi/Laboratory1/Laboratory1/Properties/AssemblyInfo.cs",
+		"/home/kuba/nodev6/Dockerfile",
+		"/home/kuba/studia/wdsi/node_modules/pathfinding/README.md",
+		"/home/kuba/studia/wdsi/notatk",
+		"/home/kuba/Downloads/Laboratory1/Laboratory1/State.cs",
+		"/home/kuba/Downloads/Laboratory1/Laboratory1/Program.cs",
+		"/home/kuba/studia/wdsi/electron-quick-start/renderer.js",
+		"/home/kuba/studia/wdsi/electron-quick-start/index.html",
+		"/home/kuba/studia/wdsi/electron-quick-start/main.js",
+		"/home/kuba/whyzut/www/res/paper-card-repeater.html",
+		"/home/kuba/whyzut/www/bower_components/paper-icon-button/paper-icon-button.html",
+		"/home/kuba/whyzut/plugins/cordova-plugin-file/www/blackberry10/readEntries.js",
+		"/home/kuba/whyzut/www/bower_components/paper-card/paper-card.html",
+		"/home/kuba/Downloads/plan_zajec.ics",
+		"/home/kuba/whyzut/.gitignore",
+		"/home/kuba/whyzut/www/index.html",
+		"/home/kuba/whyzut/www/spec.html",
+		"/home/kuba/.ssh/id_rsa.pub",
+		"/home/kuba/phonegap-test/myApp/config.xml",
+		"/home/kuba/phonegap-test/myApp/plugins/cordova-plugin-http/www/cordovaHTTP.js",
+		"/home/kuba/studia/ptd/node_modules/plotter/README.md",
+		"/home/kuba/studia/ptd/lab1.js",
+		"/home/kuba/studia/ptd/node_modules/plotter/plotter.js",
+		"/home/kuba/im_machines/instant_post_app/sails-app/app-ip/api/policies/isLogged.js",
+		"/home/kuba/im_machines/instant_post_app/sails-app/app-ip/api/policies/notLogged.js",
+		"/home/kuba/im_machines/instant_post_app/sails-app/app-ip/config/http.js",
+		"/home/kuba/im_machines/instant_post_app/sails-app/app-ip/api/policies/sessionAuth.js",
+		"/usr/local/bin/pip",
+		"/home/kuba/im_machines/instant_post_app/sails-app/app-ip/views/app/index.haml",
+		"/home/kuba/im_machines/instant_post_app/sails-app/app-ip/api/controllers/DemoController.js",
+		"/home/kuba/im_machines/instant_post_app/sails-app/app-ip/node_modules/haml/Readme.md",
+		"/home/kuba/im_machines/instant_post_app/sails-app/app-ip/node_modules/haml/haml.js",
+		"/home/kuba/im_machines/instant_post_app/sails-app/app-ip/views/demo/index.haml",
+		"/home/kuba/im_machines/instant_post_app/plainNotes/.brain/Inbox.md",
+		"/home/kuba/im_machines/instant_post_app/sails-app/app-ip/.gitignore",
+		"/home/kuba/im_machines/instant_post_app/sails-app/assets/im-angular/app-demo.coffee",
+		"/home/kuba/im_machines/instant_post_app/sails-app/assets/im-angular/components/sails-app/controllers/LoginController.coffee",
+		"/home/kuba/im_machines/instant_post_app/sails-app/assets/im-angular/app-sails.coffee",
+		"/home/kuba/im_machines/instant_post_app/sails-app/assets/im-angular/demos/angular-material-sails.haml",
+		"/home/kuba/im_machines/instant_post_app/sails-app/views/404.haml",
+		"/home/kuba/im_machines/instant_post_app/sails-app/views/500.haml",
+		"/home/kuba/im_machines/instant_post_app/sails-app/views/403.haml",
+		"/home/kuba/im_machines/instant_post_app/sails-app/assets/manifest.json",
+		"/home/kuba/im_machines/instant_post_app/sails-app/assets/manifest.webapp",
+		"/home/kuba/im_machines/instant_post_app/sails-app/assets/im-angular/demos/angular-material.haml",
+		"/home/kuba/im_machines/instant_post_app/sails-app/.tmp/public/assets/demos/angular-material.html",
+		"/home/kuba/im_machines/instant_post_app/sails-app/node_modules/haml/package.json",
+		"/home/kuba/im_machines/instant_post_app/sails-app/package.json",
+		"/home/kuba/im_machines/instant_post_app/sails-app/views/home/index.haml",
+		"/home/kuba/im_machines/instant_post_app/sails-app/config/views.js",
+		"/home/kuba/im_machines/instant_post_app/sails-app/views/layout.haml",
+		"/home/kuba/im_machines/instant_post_app/sails-app/config/http.js",
+		"/home/kuba/im_machines/instant_post_app/sails-app/tasks/config/sync.js",
+		"/home/kuba/im_machines/instant_post_app/sails-app/tasks/config/copy.js",
+		"/home/kuba/im_machines/instant_post_app/sails-app/assets/styles/importer.scss",
+		"/home/kuba/im_machines/instant_post_app/sails-app/node_modules/haml/Readme.md",
+		"/home/kuba/im_machines/instant_post_app/sails-app/.bowerrc",
+		"/home/kuba/im_machines/instant_post_app/sails-app/.tmp/public/assets/app.src.coffee",
+		"/home/kuba/im_machines/instant_post_app/sails-app/assets/im-angular/app.demo.coffee",
+		"/home/kuba/im_machines/instant_post_app/sails-app/node_modules/haml/haml.js",
+		"/home/kuba/im_machines/instant_post_app/sails-app/tasks/config/haml.js",
+		"/home/kuba/im_machines/instant_post_app/sails-app/tasks/config/sass.js",
+		"/home/kuba/im_machines/instant_post_app/sails-app/assets/im-angular/components/node-ip/views/partial/dashboard.haml",
+		"/home/kuba/im_machines/instant_post_app/sails-app/assets/im-angular/components/node-ip/views/partial/recently.haml",
+		"/home/kuba/im_machines/instant_post_app/sails-app/tasks/register/syncAssets.js",
+		"/home/kuba/im_machines/instant_post_app/sails-app/tasks/register/compileAssets.js",
+		"/home/kuba/im_machines/instant_post_app/sails-app/tasks/config/coffee.js",
+		"/home/kuba/im_machines/instant_post_app/sails-app/.gitignore",
+		"/home/kuba/im_machines/instant_post_app/sails-app/Gruntfile.js",
+		"/home/kuba/im_machines/instant_post_app/sails-app/assets/js/global.coffee",
+		"/home/kuba/im_machines/instant_post_app/sails-app/.tmp/public/styles/importer.css",
+		"/home/kuba/im_machines/instant_post_app/sails-app/api/controllers/AuthController.js",
+		"/home/kuba/im_machines/instant_post_app/sails-app/config/routes.js",
+		"/home/kuba/im_machines/instant_post_app/sails-app/.tmp/public/styles/importer.less",
+		"/home/kuba/im_machines/instant_post_app/sails-app/assets/styles/importer.less",
+		"/home/kuba/im_machines/instant_post_app/sails-app/.tmp/public/js/locale.js.map",
+		"/home/kuba/im_machines/instant_post_app/sails-app/assets/js/locale.coffee",
+		"/home/kuba/im_machines/instant_post_app/sails-app/sails.log",
+		"/media/kuba/chromebook ext4/Narcos.S01E06.WEBRip.x264-TASTETV[rarbg]/Narcos.S01E06.WEBRip.x264-TASTETV.txt",
+		"/media/kuba/chromebook ext4/Narcos.S01E07.WEBRip.x264-TASTETV[rarbg]/Narcos.S01E07.WEBRip.x264-TASTETV.txt",
+		"/home/kuba/im_machines/instant_post_app/sails-app/views/ejs/layout.ejs",
+		"/usr/share/X11/xkb/symbols/pc",
+		"/home/kuba/im_machines/instant_post_app/sails-app/views/auth/index.haml-coffee",
+		"/home/kuba/im_machines/instant_post_app/sails-app/views/auth/index.haml",
+		"/home/kuba/im_machines/instant_post_app/sails-app/test/mocha.opts",
+		"/home/kuba/im_machines/instant_post_app/sails-app/test/integration/models/User.test.js",
+		"/home/kuba/im_machines/instant_post_app/sails-app/test/integration/scenario/UserLocalLogin.test.js",
+		"/home/kuba/im_machines/instant_post_app/sails-app/test/bootstrap.test.js",
+		"/home/kuba/im_machines/instant_post_app/sails-app/test/integration/controllers/UserLogin.test.js",
+		"/home/kuba/im_machines/instant_post_app/sails-app/api/models/User.js",
+		"/home/kuba/im_machines/instant_post_app/sails-app/config/policies.js",
+		"/home/kuba/.im_user_specific",
+		"/home/kuba/.zshenv",
+		"/home/kuba/im_machines/instant_post_app/sails-app/config/sockets.js",
+		"/home/kuba/im_machines/instant_post_app/sails-app/views/auth/index.ejs",
+		"/home/kuba/im_machines/instant_post_app/sails-app/assets/js/dependencies/sails.io.js",
+		"/home/kuba/im_machines/instant_post_app/im_admins/node_sandbox/sailsApp/todoApp/.gitignore",
+		"/home/kuba/im_machines/instant_post_app/sails-app/views/home/index.ejs",
+		"/home/kuba/im_machines/instant_post_app/im_admins/node_sandbox/sailsApp/todoApp/package.json",
+		"/home/kuba/im_machines/instant_post_app/im_admins/node_sandbox/sailsApp/todoApp/node_modules/kue/lib/queue/worker.js",
+		"/home/kuba/im_machines/instant_post_app/im_admins/node_sandbox/sailsApp/todoApp/node_modules/kue/lib/queue/job.js",
+		"/home/kuba/im_machines/instant_post_app/im_admins/node_sandbox/sailsApp/todoApp/views/login.ejs"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"*js*, *sudoku*",
+			"*js*",
+			"",
+			"*coffee*",
+			"",
+			"*/attached_files/*",
+			"*attached_files*",
+			"*.sh*",
+			"*sh*",
+			"",
+			"*sh*",
+			"",
+			"*js*",
+			"*js*,",
+			"*js*",
+			"",
+			"*js*",
+			"*haml*",
+			"",
+			"*css*",
+			"",
+			"*css*",
+			"",
+			"*haml*",
+			"*css*",
+			"*haml*",
+			"*css*",
+			"*haml*",
+			"",
+			"*haml*",
+			"",
+			"-/docker/wp*",
+			"-/docker/wp*, *haml*",
+			"-/docker/wp*",
+			"-/docker/wp*, *css*",
+			"-/docker/wp*",
+			"-/docker/wp*, *css*",
+			"-/docker/wp*, *haml*",
+			"-/docker/wp*,",
+			"-/docker/wp*, *haml*",
+			"-/docker/wp*",
+			"-/docker/wp*, *haml*",
+			"-/docker/wp*, *css*",
+			"-/docker/wp*",
+			"-/docker/wp*, *html*",
+			"-/docker/wp*, *css*",
+			"-/docker/wp*, *haml*",
+			"-/docker/wp*, *css*",
+			"-/docker/wp*, *haml*",
+			"-/docker/wp*, *css*",
+			"-/docker/wp*, *haml*",
+			"-/docker/wp*",
+			"-/docker/wp*, *haml*",
+			"-/docker/wp*",
+			"-/docker/wp*, *haml*",
+			"-/docker/wp*",
+			"-/docker/wp*,*haml*",
+			"-/docker/wp*,",
+			"-/docker/wp*,*js*",
+			"-/docker/wp*,",
+			"-/docker/wp*, *haml*",
+			"-/docker/wp*",
+			"-/docker/wp*, *css*",
+			"-/docker/wp*, *html*",
+			"-/docker/wp*, *haml*",
+			"-/docker/wp*, *html*",
+			"-/docker/wp*",
+			"-/docker/wp*, *html*",
+			"-/docker/wp*",
+			"-/docker/wp*, *js*",
+			"-/docker/wp*",
+			"-/docker/wp*, *haml*",
+			"-/docker/wp*, *css*",
+			"-/docker/wp*, *js*",
+			"-/docker/wp*, *haml*",
+			"-/docker/wp*, ",
+			"-/docker/wp*, *rb*",
+			"-/docker/wp*, *html*",
+			"-/docker/wp*",
+			"*css*, -/docker/wp*",
+			"*css*,-/docker/wp*",
+			"-/docker/wp*",
+			"*css*,-/docker/wp*",
+			"*html*,-/docker/wp*",
+			"*css*,-/docker/wp*",
+			"*haml*,-/docker/wp*",
+			"*haml*,-*wp*",
+			"dataentry4*haml*",
+			"*haml*",
+			"",
+			"*haml*",
+			"",
+			"*rb*",
+			"",
+			"*haml*",
+			"",
+			"*haml*",
+			"",
+			"*css*",
+			"*haml*",
+			"",
+			"*html*",
+			"*js*",
+			"*haml*",
+			"",
+			"*coffee*",
+			"*js*",
+			"",
+			"*scss*",
+			"*php*",
+			"",
+			"*wp-admin*",
+			"",
+			"/var/www/dira/atelier-new/elements",
+			"/cucumber/",
+			"*cucumber*",
+			"",
+			"*php*",
+			"",
+			"*php*",
+			"",
+			"*php*",
+			"*css*",
+			"",
+			"*php*",
+			"",
+			"*css*",
+			"*cs*"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"._children",
+			"val",
+			"Children",
+			" ",
+			"drawSudoku",
+			"input\"",
+			"input",
+			"next",
+			"sudokuResults",
+			"redraw",
+			"row1",
+			"Solutions",
+			"Solutuion",
+			"drawSudoku",
+			" ",
+			"h2",
+			"./",
+			"clear",
+			"redraw",
+			"1 4 5 3 2 7 6 9 8\n8 3 9 6 5 4 1 2 7\n6 7 2 9 1 8 5 4 3\n4 9 6 1 8 5 3 7 2\n2 1 8 4 7 3 9 5 6\n7 5 3 2 9 6 4 8 1\n3 6 7 5 4 2 8 1 9\n9 8 4 7 6 1 2 3 5\n5 2 1 8 3 9 7 6 4",
+			"5 2 1 8 3 9 7 6 4",
+			"5 2 1 8 3 9 7 6 4 ",
+			"8 3 9 6 5 4 1 2 7",
+			"1 4 5 3 2 7 6 9 8",
+			"1 4 5 3 2 7 6 9 8 ",
+			"1 4 5 3 2 7 6 9 8\n8 3 9 6 5 4 1 2 7\n6 7 2 9 1 8 5 4 3\n4 9 6 1 8 5 3 7 2\n2 1 8 4 7 3 9 5 6\n7 5 3 2 9 6 4 8 1\n3 6 7 5 4 2 8 1 9\n9 8 4 7 6 1 2 3 5\n5 2 1 8 3 9 7 6 4",
+			", ",
+			"]",
+			"[",
+			" this._",
+			"isAdmissible",
+			"null",
+			"i",
+			"1 4 5 3 2 7 6 9 8",
+			", ",
+			"inserted",
+			"insertedI[",
+			"inserted",
+			"= 5",
+			"inserted",
+			"inserted ",
+			"possibilities.delete",
+			"delete(",
+			" ",
+			"debugger",
+			"return Infinity",
+			"mozliwosci",
+			"mozliw",
+			" ",
+			" |",
+			".",
+			"buildChildren",
+			"_h",
+			"_initialState",
+			"ComputeHeuristicGrade",
+			"j",
+			"false",
+			"i",
+			"ComputeHeuristicGrade",
+			"registerSolution",
+			"_solutions",
+			"parent.id",
+			"_open",
+			"this._open",
+			"this.isStopAfterSecondSolution",
+			"this.isStopAfterFirstSolution",
+			"this.initialState",
+			"this.solutions",
+			"this.open",
+			"search",
+			"...theArgs",
+			"SudokuState",
+			"AStarSearch",
+			"substring",
+			"this.",
+			"[0] = ",
+			" = ",
+			",",
+			"Alpha (",
+			"Alpha",
+			"SudokuSearch",
+			"=0",
+			"AStarSearch",
+			"_parent",
+			"Parent (",
+			"_g",
+			"G (",
+			"Id",
+			"ID",
+			"_depth",
+			"Depth (",
+			"Depth ",
+			"_children",
+			"Children (",
+			"_beta",
+			"Beta (",
+			"_alpha",
+			"Alpha (",
+			"Alpha",
+			"this.alpha",
+			"alpha",
+			"IsAdmissible",
+			"isAdmissible",
+			"Alpha",
+			"AStarSearch",
+			"isStopAfterFirstSolution",
+			"solutions",
+			"list",
+			"Solutions",
+			"initialState",
+			"currentState",
+			"this.closed",
+			"this.open2",
+			"open2",
+			"this.open2",
+			"if ( !this.open2",
+			"this.closed =",
+			"this.closed",
+			"this.open.Keys",
+			"isNewerBetter",
+			"open.Keys",
+			"this.open2.Add(child.ID)",
+			"this.open.Add(child, null);",
+			"this.open2.Contains(child.ID)",
+			"this.open",
+			".open",
+			"open",
+			"open."
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\n      ",
+			"inw02_________________________make_js_docs________________02",
+			"\"$gulp_log\" >>",
+			"node_compose_path",
+			"e",
+			"ipw18_________________________im_setup_git_modules________18",
+			"ipw17_________________________im_webelements_compiler_____17",
+			"instant_posts_workflow_____23",
+			"instant_posts_workflow_____22",
+			"instant_posts_workflow_____21",
+			"instant_posts_workflow_____20",
+			"instant_posts_workflow_____19",
+			"instant_posts_workflow_____18",
+			"instant_posts_workflow_____17",
+			"instant_posts_workflow_____16",
+			"instant_posts_workflow_____15",
+			"instant_posts_workflow_____14",
+			"instant_posts_workflow_____13",
+			"instant_posts_workflow_____12",
+			"instant_posts_workflow_____11",
+			"instant_posts_workflow_____10",
+			"instant_posts_workflow_____9",
+			"instant_posts_workflow_____8",
+			"instant_posts_workflow_____7",
+			"instant_posts_workflow_____6",
+			"install_node_polymer_compiler",
+			"log.info([",
+			"/images/photo.jpg",
+			"setScrollOffSetCore",
+			"fill-div-content.height-from.shadow-scrolling{data:{shadow_target: \"marketing-shadow\",",
+			".shadow-scrolling{data: {from: \".left-side\", shadow_target:\".left-side\"}}",
+			".left-side-scroller.invisible-scroll.with-padding.height-from.shadow-scrolling.non-shadow-xs-sm{data: {from: \".left-side\", shadow_target:\".left-side\"}}",
+			".left-side.invisible-scroll-outer.col-md-4.col-lg-3.col-lg-offset-1.cut-height{data:{height_cut: \"24\"}}",
+			"mock-scroll",
+			".left-side.col-md-4.shadow-scrolling",
+			"im-paper-tabs-1",
+			"im-swipe-pages-1",
+			"$this->items =",
+			"echo __FILE__;exit();$this->items =",
+			"isset($_GET[$post_type])",
+			".content.window-height{ :layout=> \"\",  :vertical => \"\", :fullbleed => \"\", 'data-as'=> 'min-height'}",
+			"../elements/users.haml",
+			"(compile_haml('../elements/users.php'))",
+			".haml",
+			"\", ",
+			"());\n",
+			"$\\1",
+			"@mixin \\2",
+			"$\\1",
+			"a842f4f9e2884d5598d3c5146eb98d11",
+			"087e0f5b8e2f4472b753941faf461197",
+			"}else if(!$('body#single-tag-event, .iframe-tags').length){\n    $('.loader-screen').fadeOut(300);\n  }",
+			"/?page=tags",
+			"#FFFFFF",
+			"ateli.eu",
+			"margin-top: 60px !important",
+			"<?php include '../elements/common_html.php';?>",
+			"capitalizeFirstLetter",
+			"'Lato'",
+			"<?php include '../elements/alerts.php';?>\n<div class=\"sub-body\">",
+			"$de_town_id",
+			"$category_name_slug",
+			"checkPartner($category_name_slug",
+			"$postslist = getPostsByName($category_name_slug,",
+			"$category_name_slug = '';\\n $postslist = getPostsByName($category_name_slug,",
+			"\\n $postslist = getPostsByName($category_name_slug,",
+			"",
+			"class: \"tile-head\"",
+			"= link_to polymorphic_path([current_user.accountable]), class: \"tile-head\", remote: true, data:{id: \"#{locals_feature_id}\"} do",
+			"= link_to polymorphic_path([current_user.accountable]), class: \"tile-head\", remote: true, data:{step: \"#{locals_feature_id}\"} do",
+			"= link_to polymorphic_path([current_user.accountable]), class: \"tile-head\", remote: true, data:{step: \"#{locals_feature_id}\"}",
+			"%a.tile-head{:href => \"#\", remote: true, data:{step: \"#{locals_feature_id}\"}}",
+			"%a.tile-head{:href => \"#\", data:{step: \"#{locals_feature_id}\"}}",
+			"tile_of_feature_id_#{locals_feature_id}\", data:{step",
+			".tile-new{class: \"tile_of_feature_id_#{locals_feature_id}\", data:{id:\"#{locals_feature_id}\"}}",
+			"%li.tile.tile-double{class: \"tile_of_feature_id_#{locals_feature_id}\", data:{id:\"#{locals_feature_id}\"}}",
+			"current_user.has_role?('designer')",
+			"current_user.accountable,",
+			"(current_user.accountable)",
+			"current_user.accountable.",
+			"current_user",
+			"***",
+			"temp-temp-size",
+			"",
+			"%p.product-price.inline",
+			"%p\n%p.product-price",
+			"%p.product-price",
+			"scripts.showAjaxMessage",
+			"class: \"",
+			"), target: \"_blank\""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 38.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 155.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/User/nodejs.sublime-build",
+	"project": "pz.sublime-project",
+	"replace":
+	{
+		"height": 86.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"przy",
+				"przykladowe"
+			],
+			[
+				"es-collections",
+				"sudoku/node_modules/es-collections/PriorityQueue.js"
+			],
+			[
+				"stacs",
+				"Laboratory1/Laboratory1/State.cs"
+			],
+			[
+				"astar",
+				"Laboratory1/Laboratory1/AStarSearch.cs"
+			],
+			[
+				"astajs",
+				"sudoku/classes/AStarSearch.js"
+			],
+			[
+				"atarcs",
+				"Laboratory1/Laboratory1/AStarSearch.cs"
+			],
+			[
+				"astarjs",
+				"sudoku/classes/AStarSearch.js"
+			],
+			[
+				"as",
+				"Laboratory1/Laboratory1/AStarSearch.cs"
+			],
+			[
+				"stat",
+				"sudoku/classes/State.js"
+			],
+			[
+				"a",
+				"Laboratory1/Laboratory1/AStarSearch.cs"
+			],
+			[
+				"pr",
+				"przykladowe"
+			],
+			[
+				"sudokustate.js",
+				"sudoku/classes/SudokuState.js"
+			],
+			[
+				"sudokstajs",
+				"sudoku/classes/SudokuState.js"
+			],
+			[
+				"docke",
+				"Dockerfile"
+			],
+			[
+				"renderer.js",
+				"sudoku/renderer.js"
+			],
+			[
+				"indexht",
+				"sudoku/index.html"
+			],
+			[
+				"main",
+				"sudoku/main.js"
+			],
+			[
+				"inde",
+				"index.js"
+			],
+			[
+				"progr",
+				"sudoku/classes/Program.js"
+			],
+			[
+				"asta",
+				"Laboratory1/Laboratory1/AStarSearch.cs"
+			],
+			[
+				"state2",
+				"Laboratory1/Laboratory1/node/State2.js"
+			],
+			[
+				"sudoku",
+				"Laboratory1/Laboratory1/SudokuSearch.cs"
+			],
+			[
+				"prog",
+				"Laboratory1/Laboratory1/node/Program.js"
+			],
+			[
+				"pathfindingread",
+				"node_modules/pathfinding/README.md"
+			],
+			[
+				"re",
+				"plugins/cordova-plugin-file/www/blackberry10/readEntries.js"
+			],
+			[
+				"/paper-icon-button/paper-icon-button.html",
+				"www/bower_components/paper-icon-button/paper-icon-button.html"
+			],
+			[
+				"bower_components/paper-card/paper-card.html",
+				"www/bower_components/paper-card/paper-card.html"
+			],
+			[
+				".gi",
+				".gitignore"
+			],
+			[
+				"index",
+				"www/index.html"
+			],
+			[
+				"cordo",
+				"plugins/cordova-plugin-http/www/cordovaHTTP.js"
+			],
+			[
+				"config",
+				"config.xml"
+			],
+			[
+				"cordovahttp",
+				"plugins/cordova-plugin-http/www/cordovaHTTP.js"
+			],
+			[
+				"plo",
+				"node_modules/plotter/plotter.js"
+			],
+			[
+				"pack",
+				"package.json"
+			],
+			[
+				"http",
+				"config/http.js"
+			],
+			[
+				"auth",
+				"api/policies/sessionAuth.js"
+			],
+			[
+				"homeco",
+				"api/controllers/HomeController.js"
+			],
+			[
+				"sesso",
+				"config/session.js"
+			],
+			[
+				"polic/js",
+				"api/policies/sessionAuth.js"
+			],
+			[
+				"poli",
+				"config/policies.js"
+			],
+			[
+				"indexh",
+				"views/app/index.haml"
+			],
+			[
+				"giti",
+				".gitignore"
+			],
+			[
+				"login",
+				"assets/im-angular/components/sails-app/controllers/LoginController.coffee"
+			],
+			[
+				"angular",
+				".tmp/public/assets/demos/angular-material.html"
+			],
+			[
+				"appdemo",
+				"assets/im-angular/app-demo.coffee"
+			],
+			[
+				"pac",
+				"package.json"
+			],
+			[
+				"homeham",
+				"views/home/index.haml"
+			],
+			[
+				"copy",
+				"tasks/config/copy.js"
+			],
+			[
+				"recen",
+				"assets/im-angular/components/node-ip/views/partial/recently.haml"
+			],
+			[
+				"packej",
+				"package.json"
+			],
+			[
+				"sass",
+				"tasks/config/sass.js"
+			],
+			[
+				"coffee",
+				"tasks/config/coffee.js"
+			],
+			[
+				"gitig",
+				".gitignore"
+			],
+			[
+				"git",
+				".gitignore"
+			],
+			[
+				"impo",
+				"assets/styles/importer.scss"
+			],
+			[
+				".less",
+				".tmp/public/styles/importer.css"
+			],
+			[
+				"syncassets.js",
+				"tasks/register/syncAssets.js"
+			],
+			[
+				"less",
+				".tmp/public/styles/importer.less"
+			],
+			[
+				"compi",
+				"tasks/register/compileAssets.js"
+			],
+			[
+				"import",
+				"assets/styles/importer.less"
+			],
+			[
+				"cof",
+				"tasks/config/coffee.js"
+			],
+			[
+				"grun",
+				"Gruntfile.js"
+			],
+			[
+				"sail",
+				"sails.log"
+			],
+			[
+				"packj",
+				"package.json"
+			],
+			[
+				"laye",
+				"views/ejs/layout.ejs"
+			],
+			[
+				"layo",
+				"views/layout.haml"
+			],
+			[
+				"indeham",
+				"views/auth/index.haml-coffee"
+			],
+			[
+				"ro",
+				"config/routes.js"
+			],
+			[
+				"htt",
+				"config/http.js"
+			],
+			[
+				"boo",
+				"test/bootstrap.test.js"
+			],
+			[
+				"packjson",
+				"package.json"
+			],
+			[
+				"userc",
+				"test/integration/controllers/UserController.test.js"
+			],
+			[
+				"usertes",
+				"test/integration/models/User.test.js"
+			],
+			[
+				"mocha",
+				"test/mocha.opts"
+			],
+			[
+				"pacj",
+				"package.json"
+			],
+			[
+				"modeuse",
+				"api/models/User.js"
+			],
+			[
+				"autco",
+				"api/controllers/AuthController.js"
+			],
+			[
+				"rou",
+				"config/routes.js"
+			],
+			[
+				"httpjs",
+				"config/http.js"
+			],
+			[
+				"roujs",
+				"config/routes.js"
+			],
+			[
+				"singup",
+				"views/signup.ejs"
+			],
+			[
+				"workerj",
+				"node_modules/kue/lib/queue/worker.js"
+			],
+			[
+				"job",
+				"node_modules/kue/lib/queue/job.js"
+			],
+			[
+				"lgoi",
+				"views/login.ejs"
+			],
+			[
+				"sig",
+				"views/signup.ejs"
+			],
+			[
+				"config/local.js",
+				"config/local.js"
+			],
+			[
+				"config/connections.js",
+				"config/connections.js"
+			],
+			[
+				"autc",
+				"api/controllers/AuthController.js"
+			],
+			[
+				"user",
+				"api/models/User.js"
+			],
+			[
+				"apipoli",
+				"api/policies/sessionAuth.js"
+			],
+			[
+				"confihtt",
+				"config/http.js"
+			],
+			[
+				"aut",
+				"api/controllers/AuthController.js"
+			],
+			[
+				"conuse",
+				"api/controllers/UserController.js"
+			],
+			[
+				"gruntfi",
+				"sailsApp/file-uploads/Gruntfile.js"
+			],
+			[
+				".bowe",
+				"sailsApp/sails-angular-todo/.bowerrc"
+			],
+			[
+				"bowe",
+				"sailsApp/bower.json"
+			],
+			[
+				"confmode",
+				"sailsApp/todoApp/config/models.js"
+			],
+			[
+				"use",
+				"sailsApp/todoApp/api/models/User.js"
+			],
+			[
+				"controle",
+				"sailsApp/todoApp/api/controllers/UserController.js"
+			],
+			[
+				"configlocaljs",
+				"sailsApp/todoApp/config/local.js"
+			],
+			[
+				"config/express",
+				"expressApp/config/express.coffee"
+			],
+			[
+				"config/config",
+				"expressApp/config/config.coffee"
+			],
+			[
+				"/config/express",
+				"expressApp/config/express.coffee"
+			],
+			[
+				"app",
+				"expressApp/app.js"
+			],
+			[
+				"gulp",
+				"expressApp/gulpfile.js"
+			],
+			[
+				"docker",
+				"docker-compose.yml"
+			],
+			[
+				"chrome",
+				"im_admins/lnmodules/im_admins_wiki/wiki_articles/art60_chromebook_crouton.md"
+			],
+			[
+				"doc",
+				"im_admins/docker-compose.yml"
+			],
+			[
+				"zsh",
+				"im_admins/ansible/templates/zshenv.j2"
+			],
+			[
+				"other",
+				"im_admins/im_aliases/attached_files/other_helpers.sh"
+			],
+			[
+				"136",
+				"im_admins/im_aliases/136_create_docker_compose_links.sh"
+			],
+			[
+				"ansible",
+				"im_admins/lnmodules/im_admins_wiki/wiki_articles/art112_ansible_learn.md"
+			],
+			[
+				"28_install_docker",
+				"im_admins/im_aliases/28_install_docker.sh"
+			],
+			[
+				"dockercompos",
+				"im_admins/compose/ip/docker-compose.yml"
+			],
+			[
+				"dockerco",
+				"im_admins/compose/db/docker-compose.yml"
+			],
+			[
+				"sanboxdo",
+				"im_admins/sandbox_docker/docker-compose.yml"
+			],
+			[
+				"plyab",
+				"im_admins/ansible/playbook-test.yml"
+			],
+			[
+				"inventory/terraform.py",
+				"im_deploy/ansible/inventory/terraform.py"
+			],
+			[
+				"read",
+				"im_deploy/ansible/README.md"
+			],
+			[
+				"currenthost",
+				"im_admins/current/current_hosts_list_exec.sh"
+			],
+			[
+				"terraform/env-",
+				"im_admins/im_aliases/sources/terraform/env-devonline/terraform.tfstate"
+			],
+			[
+				"tftsta",
+				"im_admins/im_aliases/sources/terraform/env-devonline/terraform.tfstate"
+			],
+			[
+				"22.sh",
+				"im_admins/im_aliases/22_run_azure_terraform_simple.sh"
+			],
+			[
+				"tfst",
+				"im_admins/im_aliases/sources/terraform/env-devonline/terraform.tfstate"
+			],
+			[
+				"ansiblele",
+				"im_admins/lnmodules/im_admins_wiki/wiki_articles/art112_ansible_learn.md"
+			],
+			[
+				"xdt",
+				"im_admins/lnmodules/im_admins_wiki/wiki_articles/art69_xdotool.md"
+			],
+			[
+				"editjso",
+				"im_admins/node-compose/edit-json/edit-json.coffee"
+			],
+			[
+				"158",
+				"im_admins/im_aliases/158_simple_json_actions.sh"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"sa",
+				"~/im_machines/instant_post_app/sails-app/i.sublime-project"
+			],
+			[
+				"ptd",
+				"~/studia/ptd/ptd.sublime-project"
+			],
+			[
+				"sails",
+				"~/im_machines/instant_post_app/sails-app/i.sublime-project"
+			],
+			[
+				"sail",
+				"~/im_machines/instant_post_app/sails-app/i.sublime-project"
+			],
+			[
+				"",
+				"~/im_machines/instant_post_app/sails-app/app-utility/i.sublime-project"
+			],
+			[
+				"pho",
+				"~/phonegap-test/i.sublime-workspace"
+			],
+			[
+				"imbas",
+				"~/im_machines/instant_post_app/im_base.sublime-project"
+			],
+			[
+				"de",
+				"~/im_machines/instant_post_app/de4.sublime-project"
+			],
+			[
+				"app wp",
+				"~/im_machines/instant_post_app/node_express_polymer/app_wp.sublime-project"
+			],
+			[
+				"node",
+				"~/im_machines/instant_post_app/node_express_polymer/app_wp.sublime-project"
+			],
+			[
+				"app n",
+				"~/im_machines/instant_post_app/node_express_polymer/app_wp.sublime-project"
+			],
+			[
+				"im",
+				"~/im_machines/instant_post_app/node_express_polymer/app_wp.sublime-project"
+			],
+			[
+				"de4",
+				"~/im_machines/instant_post_app/de4.sublime-project"
+			],
+			[
+				"app",
+				"~/im_machines/instant_post_app/node_express_polymer/app_wp.sublime-project"
+			],
+			[
+				"appwp",
+				"~/im_machines/instant_post_app/node_express_polymer/app_wp.sublime-project"
+			],
+			[
+				"imwp",
+				"~/im_machines/instant_post_app/node_express_polymer/app_wp.sublime-project"
+			],
+			[
+				"ins",
+				"~/im_machines/instant_post_app/insantapp.sublime-project"
+			],
+			[
+				"ma",
+				"~/MATLAB/studia/matlab.sublime-project"
+			],
+			[
+				"le",
+				"~/lex_by_md_0.sublime-project"
+			],
+			[
+				"lex",
+				"~/lex_by_md_0.sublime-project"
+			],
+			[
+				"d",
+				"~/lex_by_md_0.sublime-project"
+			],
+			[
+				"so2",
+				"~/so2/so2.sublime-project"
+			],
+			[
+				"l",
+				"~/lex_by_md_0.sublime-project"
+			],
+			[
+				"ate",
+				"~/vagrants/vagrant_wp/atelier-wp.sublime-project"
+			],
+			[
+				"pro",
+				"~/programowanie/programowanie.sublime-project"
+			],
+			[
+				"st",
+				"~/struktury/struktury.sublime-project"
+			],
+			[
+				"c",
+				"~/sublime-project/contrete5.sublime-project"
+			],
+			[
+				"spec",
+				"~/sublime-project/spec6.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 293.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
