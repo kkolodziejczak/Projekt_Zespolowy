@@ -1,0 +1,26 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="iron-swipeable-page">
+  <template>
+    <style>
+      :host {
+        display: block;
+        position: relative;
+        height: auto;
+      }
+      :host(.iron-swiping){
+        position: absolute;
+        /*padding: 0 8px;*/
+        /*width: calc(100% - 16px);*/
+        width: 100%;
+      }
+    </style>
+    <content></content>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'iron-swipeable-page',
+    });
+  </script>
+</dom-module>

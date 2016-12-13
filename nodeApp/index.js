@@ -1,15 +1,29 @@
-// jshint node: true
-// jshint esversion: 6
-// jshint asi: true
-
 const SerialPort = require('serialport')
+const ByteLength = SerialPort.parsers.readline
+
+// const stdin = process.stdin
+// stdin.setRawMode( true )
+
+// stdin.resume()
+
+// stdin.setEncoding( 'utf8' )
+
+
+// const readline = require('readline')
+// const rl = readline.createInterface({
+//   input: process.stdin,
+//   output: process.stdout,
+//   terminal: false
+// })
+
 
 // start
 const START = '128'
 
+const PREPARE = '128 131'
+
 // Narysuj kwadrat o boku 40 cm:
 const cmd1 = '152 61'
-
 // jedz prosto 300 mm/s
 const cmd2 = '137 1 44 128 0'
 // czekaj na 40 cm
@@ -42,28 +56,129 @@ const cmd14 = '137 1 44 128 0'
 // czekaj na 40 cm
 const cmd15 = '156 1 144'
 // STOP
-const cmd16 = '137 0 0 0 0'
+const STOP = '137 0 0 0 0'
 
+// '152 17 137 1 44 128 0 156 1 144 137 1 44 0 1 157 0 90 153'
+// const RUN = '152 9 137 1 44 0 1 157 0 90 153'
+// const rotateLeft = '152 9 137 1 44 0 1 157 0 90 153'
+// const rotateRight = '152 9 137 1 44 0 1 157 0 90 153'
 // wywołaj skrypt:
-const STOP = '153'
+// przeciwnie wskazowki zegara powoli
+const rotateLeft = '137 1 1 0 1'
+// wskazowki zegara powoli
+const rotateRight = '137 -1 1 0 1'
+
+const SCRIPT = '153'
+
 
 
 // trzeba ustalic jaka jest sciezka do portu
-let pathToPort = '/dev/tty-usbserial1'
+let pathToPort = '/dev/ttyUSB0'
 const port = new SerialPort(pathToPort,
   {
     autoOpen: false,
-    baudRate: 57600
+    baudRate: 57600,
+    databits: 8,
+    parity: 'none',
+    parser: SerialPort.parsers.raw
   })
 
 port.open((err) => {
   if (err)
     return console.log('Error opening port: ', err.message)
 
+  console.log('podlaczono')
+
   // write errors will be emitted on the port since there is no callback to write
-  port.write('main screen turn on')
+  // setTimeout(() =>{
+  //   console.log('start')
+  //   port.write(START)
+  // },5000)
 
 })
 
 
+port.on('data', (data)=>{
+  process.stdout.write(data.toString())
+})
 
+// stdin.on( 'data', function( key ){
+//   // ctrl-c ( end of text )
+//   if ( key === '\u0003' ) {
+//     process.exit()
+//   }
+//   // write the key to stdout all normal like
+//   console.log(key)
+//   let line
+//   if(key == 's')
+//     line = STOP
+//   else if(key == 'w')
+//     line = cmd2
+//   else if(key == 'p')
+//     line = PREPARE
+//   else if(key == 'r')
+//     line = SCRIPT
+//   else if(key == 'q')
+//     line = rotateLeft
+//   else if(key == 'e')
+//     line = rotateRight
+
+//   if(!line)
+//     return
+
+//   let cmds = line.split(' ')
+//   let count = cmds.length
+//   let send = new Buffer(count)
+//   for (var i = 0; i < cmds.length; i++) {
+//     send[i] = parseInt(cmds[i])
+//   }
+//   port.write(send)
+
+// })
+
+var express = require('express')
+var app = express()
+
+app.get('/', function (req, res) {
+  res.sendFile(__dirname + '/index.html')
+})
+
+app.use('/', express.static('assets'))
+
+app.get('/send', function (req, res) {
+
+  if(!req.query.cmd) return res.json({msg:'blank cmd'})
+
+  let cmd = req.query.cmd
+  let line
+  if(cmd == 'stop')
+    line = STOP
+  else if(cmd == 'go')
+    line = cmd2
+  else if(cmd == 'prepare')
+    line = PREPARE
+  else if(cmd == 'script')
+    line = SCRIPT
+  else if(cmd == 'rotateLeft')
+    line = rotateLeft
+  else if(cmd == 'rotateRight')
+    line = rotateRight
+
+
+  let cmds = line.split(' ')
+  let count = cmds.length
+  let send = new Buffer(count)
+  for (var i = 0; i < cmds.length; i++) {
+    send[i] = parseInt(cmds[i])
+  }
+  port.write(send)
+
+  return res.json({msg:'cmd sent'})
+})
+
+app.listen(80, function () {
+  console.log('Example app listening on port 80!')
+})
+
+
+// zrob nadawnaie sygnalow na pidy rassbery

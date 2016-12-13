@@ -1,0 +1,254 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-localstorage/iron-localstorage.html">
+<link rel="import" href="../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../bower_components/iron-icons/social-icons.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+<dom-module id="paper-card-repeater">
+  <template>
+    <style>
+      :host {
+        display: block;
+        position: relative;
+        margin: 0 8px;
+      }
+
+      paper-card { @apply(--layout-horizontal); }
+      .box-info {
+        width: 100px;
+        height: auto;
+        background-color: var(--default-primary-color);
+        background-size: cover;
+        position: relative;
+      }
+      .box-info-text {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: calc(50% - 21px);
+        color: white;
+        font-size: 17px;
+        font-weight: 500;
+      }
+      .box-content {
+        @apply(--layout-flex);
+        float: left;
+      }
+      .box-header { @apply(--paper-font-headline); font-size: 20px; }
+      .box-name { color: var(--paper-grey-600); margin: 10px 0; }
+      paper-icon-button.box-icon {
+        --iron-icon-fill-color: white;
+        --iron-icon-stroke-color: var(--paper-grey-600);
+      }
+
+      paper-card{
+        margin-bottom: 8px;
+        width: 100%;
+        position: relative;
+        height: auto;
+      }
+      paper-card:last-child{
+        margin-bottom: 0px;
+      }
+      .white{
+        background-color: white;
+        color: black;
+      }
+      .buttons{
+        margin-bottom: 8px;
+        text-align: center;
+      }
+      .buttons paper-button{
+        margin:0;
+      }
+      #freeDay{
+        color: rgba(33, 33, 33, 0.17);
+        text-align: center;
+      }
+      #freeDay iron-icon{
+        width: 50vh;
+        height: 50vh;
+      }
+      #freeDay p{
+        font-size: 60px;
+        margin: 0;
+      }
+    </style>
+
+    <iron-localstorage
+      name="subjectList"
+      value="{{elements}}"
+      on-iron-localstorage-load-empty="initializeDefaultValue"
+      ></iron-localstorage>
+
+    <div class="buttons">
+      <!-- <paper-button raised class="white" on-tap="prevOffset" style="min-width: auto;"> < </paper-button> -->
+      <!-- <paper-button raised class="white" on-tap="setRangeDay">Dzień</paper-button> -->
+      <!-- <paper-button raised class="white" on-tap="setRangeWeek">Tydzień</paper-button> -->
+      <!-- <paper-button raised class="white" on-tap="setRangeMonth">Miesiąc</paper-button> -->
+      <!-- <paper-button raised class="white" on-tap="nextOffset" style="min-width: auto;"> > </paper-button> -->
+    </div>
+
+    <div id="paperCardOuter">
+      <div id="freeDay" hidden$="{{visibleElements}}">
+
+        <iron-icon icon="social:mood"></iron-icon>
+        <p>Brak zajęć</p>
+
+      </div>
+      <template is="dom-repeat" filter="{{isInRange(range,offsetStart,offsetEnd,date)}}" items="{{elements}}" as="elem">
+        <paper-card>
+
+          <div class="box-info" style="background-color: [[_statusColor(elem.status)]]">
+            <div class="box-info-text" style="top:48px">
+              <div>{{ _statusName(elem.status) }}</div>
+            </div>
+            <div class="box-info-text">
+              <div>{{ elem.date }}</div>
+              <div>{{ elem.dayName }}</div>
+              <div>{{ elem.startTime }}</div>
+            </div>
+          </div>
+          <div class="box-content">
+            <div class="card-content">
+              <div class="box-header">{{ _shortName(elem.subject) }}</div>
+              <div class="box-name">{{ elem.teacher }}</div>
+              <div>Forma {{ elem.roomState }}</div>
+              <div>Sala {{ elem.room }}</div>
+            </div>
+            <!-- <div class="card-actions">
+              <paper-icon-button class="box-icon" icon="star"></paper-icon-button>
+              <paper-icon-button class="box-icon" icon="star"></paper-icon-button>
+              <paper-icon-button class="box-icon" icon="star"></paper-icon-button>
+              <paper-icon-button class="box-icon" icon="star"></paper-icon-button>
+              <paper-icon-button class="box-icon" icon="star"></paper-icon-button>
+            </div> -->
+          </div>
+        </paper-card>
+      </template>
+
+    </div>
+
+
+  </template>
+
+  <script>
+    Polymer({
+      is: 'paper-card-repeater',
+
+      hostAttributes: {
+
+      },
+
+
+      properties: {
+        elements: {
+          type: Array
+        },
+        offsetStart:{
+          type: Number,
+          value: 0
+        },
+        offsetEnd:{
+          type: Number,
+          value: 0
+        },
+        range: {
+          type: String,
+          value: 'isoweek'
+        },
+        date:{
+          type: Object,
+          value: new Date()
+        }
+      },
+      observers: [
+        '_elementsCountChange(range,offsetStart,offsetEnd,date)',
+      ],
+      _elementsCountChange: function () {
+        var self = this;
+        clearTimeout(self.timeout);
+        // delay bo musza sie wyrenderowac elementy
+        self.timeout = setTimeout(function(){
+          self.visibleElements = !!(self.$.paperCardOuter.querySelectorAll('paper-card').length);
+        },200);
+      },
+      _shortName: function (name) {
+        if(name.length < 30)
+          return name;
+
+        return name.slice(0, 30).trim() + "...";
+      },
+      _statusName: function (status) {
+        if(status == 'e')
+          return 'Egzamin';
+        if(status == 'o')
+          return 'Odwołane';
+        if(status == 'r')
+          return 'Rektorskie';
+        return '';
+      },
+      _statusColor: function (status) {
+        if(status == 'e')
+          return '#673AB7';
+        if(status == 'o')
+          return '#F44336';
+        if(status == 'r')
+          return '#F44336';
+
+        return '';
+      },
+      initializeDefaultValue: function(){
+        this.elements = [];
+      },
+      setRange: function(range){
+        this.range = range;
+        this.offsetStart = 0;
+        this.offsetEnd = 0;
+      },
+      setRangeDay: function(){
+        this.range = "day";
+        this.offsetStart = 0;
+        this.offsetEnd = 0;
+      },
+      setRangeWeek: function(){
+        this.range = "isoweek";
+        this.offsetStart = 0;
+        this.offsetEnd = 0;
+      },
+      nextOffset: function(){
+        this.offsetStart += 1;
+        this.offsetEnd += 1;
+      },
+      prevOffset: function(){
+        this.offsetStart -= 1;
+        this.offsetEnd -= 1;
+      },
+      isInRange: function(range,offsetStart, offsetEnd,selectedDate){
+
+        if (!range) {
+          // set filter to null to disable filtering
+          return null;
+        } else {
+
+          return function(elem) {
+
+            var date = elem.date;
+
+            date = date + ' ' + elem.startTime;
+
+            momentDate = moment(date, "DD.MM.YYYY HH:mm");
+
+            var start = moment(selectedDate).clone().startOf(range).add(offsetStart, 'day');
+            var end = start.clone().endOf('day');
+            // var end = moment(selectedDate).endOf(range).add(offsetEnd, range);
+            return momentDate.isBetween( start, end );
+
+          };
+
+        }
+      }
+
+    });
+  </script>
+</dom-module>

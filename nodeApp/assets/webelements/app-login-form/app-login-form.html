@@ -1,0 +1,90 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../bower_components/iron-localstorage/iron-localstorage.html">
+
+
+<dom-module id="app-login-form">
+  <template>
+    <style>
+      :host {
+        display: block;
+        position: relative;
+        margin-bottom: 8px;
+      }
+      paper-button{
+        width: 100%;
+        margin: 0 0 8px 0;
+      }
+      paper-button.indigo {
+        background-color: var(--paper-indigo-500);
+        color: white;
+      }
+      paper-button.red {
+        background-color: var(--google-red-500);
+        color: white;
+      }
+    </style>
+
+    <iron-localstorage
+        name="userData"
+        value="{{data}}"
+        on-iron-localstorage-load-empty="initializeDefaultUserData"
+        ></iron-localstorage>
+
+    <iron-localstorage
+      name="userInfo"
+      value="{{user}}"
+      ></iron-localstorage>
+
+    <iron-localstorage
+      name="subjectList"
+      value="{{elements}}"
+      ></iron-localstorage>
+
+    <paper-input id="login" disabled$="[[disabled]]" label="Identyfikator" value="{{data.login}}"></paper-input>
+    <paper-input id="password" disabled$="[[disabled]]" label="Hasło" type="password" value="{{data.password}}"></paper-input>
+
+    <paper-button id="connect" disabled$="[[disabled]]" raised class="indigo">Zaloguj</paper-button>
+
+    <paper-button id="clear" disabled$="[[disabled]]" raised class="red" on-tap="clearLocalStorage">Wyczyść dane</paper-button>
+
+
+  </template>
+
+  <script>
+    Polymer({
+      is: 'app-login-form',
+
+      properties: {
+        data: {
+          type: Object
+        },
+        disabled: {
+          type: Boolean,
+          value: false
+        }
+      },
+      clearLocalStorage: function(){
+
+        this.set('data.login', "");
+        this.set('data.password', "");
+
+        this.set('user.name', "Niezalogowany");
+        this.set('user.logged', false);
+        this.set('user.lastCheck', null);
+
+        this.set('elements', []);
+        var mainApp = document.querySelector('main-app');
+
+
+      },
+      initializeDefaultUserData: function(){
+        this.data = {
+          login: "",
+          password: ""
+        };
+      },
+    });
+  </script>
+</dom-module>

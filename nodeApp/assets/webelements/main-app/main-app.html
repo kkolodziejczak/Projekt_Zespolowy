@@ -1,0 +1,491 @@
+<!-- webelements -->
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+
+<link rel="import" href="../../bower_components/app-layout/app-drawer-layout/app-drawer-layout.html">
+<link rel="import" href="../../bower_components/app-layout/app-drawer/app-drawer.html">
+<link rel="import" href="../../bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
+<link rel="import" href="../../bower_components/app-layout/app-header/app-header.html">
+<link rel="import" href="../../bower_components/app-layout/app-header-layout/app-header-layout.html">
+<link rel="import" href="../../bower_components/app-layout/app-toolbar/app-toolbar.html">
+
+<link rel="import" href="../../bower_components/app-route/app-route.html">
+<link rel="import" href="../../bower_components/app-route/app-location.html">
+
+<link rel="import" href="../../bower_components/neon-animation/neon-animated-pages.html">
+
+<link rel="import" href="../../bower_components/paper-listbox/paper-listbox.html">
+<link rel="import" href="../../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../../bower_components/paper-toast/paper-toast.html">
+
+<link rel="import" href="../../bower_components/paper-menu-button/paper-menu-button.html">
+<link rel="import" href="../../bower_components/paper-menu/paper-menu.html">
+
+<link rel="import" href="../../bower_components/paper-date-picker/paper-date-picker.html">
+
+<link rel="import" href="../../bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="../../bower_components/iron-swipeable-pages/iron-swipeable-pages.html">
+
+<link rel="import" href="../../bower_components/paper-fab/paper-fab.html">
+
+<link rel="import" href="../../bower_components/paper-progress/paper-progress.html">
+
+<link rel="import" href="../../bower_components/iron-list/iron-list.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+
+<!-- <link rel="import" href="../../bower_components/app-layout/app-scrollpos-control/app-scrollpos-control.html"> -->
+
+<!-- custom elements -->
+<link rel="import" href="../app-login-form/app-login-form.html">
+<link rel="import" href="../paper-card-repeater/paper-card-repeater.html">
+<link rel="import" href="../iron-swipeable-page/iron-swipeable-page.html">
+
+
+<dom-module id="main-app">
+
+  <template>
+    <style is="custom-style">
+      .content {
+        background-color: #eee;
+        height: auto;
+        padding: 8px;
+        min-height: calc(100vh - 64px);
+        position: relative;
+        /*szybki fix*/
+        z-index: -1;
+      }
+      .content paper-card{
+        margin-bottom: 8px;
+      }
+      .content paper-card:last-child{
+        margin-bottom: 0px;
+      }
+
+      .setting-content{
+        padding: 0 8px;
+      }
+      paper-button[max-width]{
+        width: 100%;
+        margin: 0 0 8px 0;
+      }
+      paper-button[indigo] {
+        background-color: var(--paper-indigo-500);
+        color: white;
+      }
+      paper-button[red] {
+        background-color: var(--google-red-500);
+        color: white;
+      }
+      paper-button[green] {
+        background-color: var(--google-green-500);
+        color: white;
+      }
+    </style>
+
+
+    <style>
+
+
+      app-header {
+        background-color: var(--default-primary-color);
+        color: #fff;
+      }
+
+      app-header paper-icon-button {
+        --paper-icon-button-ink-color: white;
+      }
+
+      .drawer-container{
+        /*height: 182px;*/
+      }
+      .last-check{
+        font-size: 12px;
+        text-align: center;
+      }
+      .yellow-button {
+        text-transform: none;
+        color: var(--accent-color);
+        position: absolute;
+        right: 0;
+        top: 8px;
+      }
+
+      paper-date-picker{
+        margin: 0 auto;
+        position: relative;
+      }
+      @media (max-width: 520px) {
+        paper-date-picker{
+          left: calc(50% - 164px);
+        }
+      }
+
+      paper-date-picker{
+        --paper-date-picker-heading: {
+          display: none!important;
+        }
+      }
+
+      #datePickerOuter{
+        transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        height: 0px;
+        overflow: hidden;
+        background-color: #FFF;
+        position: absolute;
+        z-index: 10;
+        will-change: height;
+      }
+
+      #swipePages.shadow {
+        overflow: hidden;
+      }
+      #swipePages.shadow:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #000;
+        opacity: 0.4;
+        z-index: 8;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        will-change: all;
+      }
+      #swipePages{
+        min-height: calc(100vh - 64px);
+      }
+      #swipePages.disabled-anim > *{
+        transition: none!important;
+      }
+      .progress-bar{
+        display: block;
+        width: 100%;
+        height: 3px;
+        position: absolute;
+      }
+
+      /*about*/
+      .about {
+        font-family: 'Roboto', 'Noto', sans-serif;
+        background-color: #eee;
+      }
+
+      .about app-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        color: #fff;
+        background-color: var(--default-primary-color);
+        /*background-color: #3f51b5;*/
+        /*--app-header-background-front-layer: {
+          background-image: url(/img/js.jpg);
+        };*/
+      }
+
+      .about paper-icon-button {
+        --paper-icon-button-ink-color: white;
+      }
+
+      .about paper-fab {
+        position: absolute;
+        right: 16px;
+        top: 248px;
+        will-change: transform;
+        transition: 0.1s -webkit-transform;
+        transition: 0.1s transform;
+      }
+
+      .about paper-fab.shrink-to-hidden {
+        -webkit-transform: scale3d(0, 0, 0);
+        transform: scale3d(0, 0, 0);
+      }
+
+      .about app-toolbar.middle {
+        height: 120px;
+      }
+
+      .about app-toolbar.bottom {
+        height: 92px;
+      }
+
+      .about .sample-content {
+        padding-top: 276px;
+      }
+
+      .about [title] {
+        margin-left: 64px;
+        font-size: 32px;
+        font-weight: 300;
+      }
+
+      .about [condensed-title] {
+        margin-left: 20px;
+        font-weight: 300;
+      }
+
+      .about #itemsList{
+        @apply(--layout-flex);
+        height: calc(100vh - 276px);
+      }
+      .about .item-outer{
+        position: relative!important;
+      }
+      .about .item {
+        @apply(--layout-horizontal);
+        cursor: pointer;
+        padding: 16px 22px;
+        border-bottom: 1px solid #DDD;
+      }
+
+      .about .item:focus,
+      .about .item.selected:focus {
+        outline: 0;
+        background-color: #ddd;
+      }
+
+      .about .about .avatar {
+        height: 40px;
+        width: 40px;
+        border-radius: 20px;
+        box-sizing: border-box;
+        background-color: #ddd;
+      }
+
+      .about .pad {
+        @apply(--layout-flex);
+        @apply(--layout-vertical);
+        padding: 0 16px;
+      }
+
+      .about .primary {
+        font-size: 16px;
+      }
+
+      .about .secondary {
+        font-size: 14px;
+      }
+
+      .about .dim {
+        color: gray;
+      }
+
+
+      .about iron-list {
+        @apply(--layout-flex);
+      }
+
+      [main-title]{
+        pointer-events: initial!important;
+      }
+
+    </style>
+
+    <iron-localstorage
+    name="userInfo"
+    value="{{user}}"
+    on-iron-localstorage-load-empty="initializeDefaultUserInfo"
+    ></iron-localstorage>
+
+
+
+    <app-location use-hash-as-path route="{{route}}"></app-location>
+    <app-route
+    route="{{route}}"
+    pattern="/:page"
+    data="{{routeData}}"
+    tail="{{subroute}}">
+  </app-route>
+
+  <paper-toast class="fit-bottom" id="updatedData" duration="0" text="[[toastText]]">
+    <paper-button onclick="updatedData.toggle()" class="yellow-button">Ok</paper-button>
+  </paper-toast>
+
+  <!-- <app-scrollpos-control selected="{{activeSelected}}"></app-scrollpos-control> -->
+  <app-drawer-layout>
+
+    <app-drawer id="drawer" swipe-open>
+      <app-header-layout has-scrolling-region>
+
+        <app-header fixed>
+          <app-toolbar style="height: 128px;"></app-toolbar>
+
+          <app-toolbar style="height: 64px;">
+            <div class="drawer-container">
+              <div class="info">
+                <div class="name">Witaj</div>
+              </div>
+            </div>
+          </app-toolbar>
+
+        </app-header>
+
+        <!-- nav menu -->
+        <paper-listbox attr-for-selected="route" selected="{{route.path}}"  on-iron-activate="_drawerSelected">
+
+          <paper-item route="/settings">
+            <paper-icon-button noink icon="settings"></paper-icon-button>
+            Ustawienia
+          </paper-item>
+
+          <paper-item route="/about">
+            <paper-icon-button noink icon="info"></paper-icon-button>
+            O mnie
+          </paper-item>
+
+        </paper-listbox>
+
+      </app-header-layout>
+    </app-drawer>
+
+    <app-header-layout>
+      <neon-animated-pages id="mainPages" attr-for-selected="route" selected="{{route.path}}">
+        <div route="/main">
+
+          <app-header condenses effects="waterfall" fixed>
+            <app-toolbar>
+              <paper-icon-button noink icon="menu" drawer-toggle></paper-icon-button>
+              <div main-title> Ustawienia  </div>
+            </app-toolbar>
+            <paper-progress class="progress-bar" indeterminate bottom-item hidden$="[[!lodingData]]"></paper-progress>
+
+          </app-header>
+
+          <div class="content">
+            <div class="setting-content">
+              <!-- <app-login-form disabled$="[[lodingData]]"></app-login-form> -->
+              <paper-button max-width raised indigo on-tap="_makeAjax" action='prepare' >prepare</paper-button>
+              <paper-button max-width raised red on-tap="_makeAjax" action='stop' >stop</paper-button>
+              <paper-button max-width raised green on-tap="_makeAjax" action='go' >go</paper-button>
+              <paper-button max-width raised indigo on-tap="_makeAjax" action='script' >script</paper-button>
+              <paper-button max-width raised indigo on-tap="_makeAjax" action='rotateLeft' >rotateLeft</paper-button>
+              <paper-button max-width raised indigo on-tap="_makeAjax" action='rotateRight' >rotateRight</paper-button>
+
+
+
+            </div>
+
+          </div>
+        </div>
+
+
+        <div class="about" route="/about">
+
+          <app-header effects="waterfall resize-title blend-background parallax-background" condenses reveals>
+            <app-toolbar>
+              <!-- <paper-icon-button noink icon="arrow-back"></paper-icon-button> -->
+              <paper-icon-button noink icon="menu" drawer-toggle></paper-icon-button>
+              <div condensed-title>Jakub Szalaty</div>
+              <!-- <paper-icon-button noink icon="create"></paper-icon-button> -->
+              <!-- <paper-icon-button noink icon="more-vert"></paper-icon-button> -->
+            </app-toolbar>
+            <app-toolbar class="middle"></app-toolbar>
+
+            <app-toolbar class="bottom">
+              <div main-title>Jakub Szalaty</div>
+
+            </app-toolbar>
+          </app-header>
+          <!-- <paper-fab icon="star"></paper-fab> -->
+
+          <div class="sample-content">
+            <iron-list id="itemsList" items="[[data]]" selected-items="{{selectedItems}}" selection-enabled multi-selection>
+
+              <div class="item-outer">
+                <div class="item">
+                  <div class="pad">
+                    <a href="https://github.com/nnaisur" target="_blank">
+
+                      <div class="primary">
+                        Github
+                      </div>
+                      <div class="secondary dim">https://github.com/nnaisur</div>
+
+                    </a>
+                  </div>
+                </div>
+                <div class="border"></div>
+              </div>
+
+            </iron-list>
+          </div>
+
+        </div>
+
+
+      </neon-animated-pages>
+
+    </app-header-layout>
+
+  </app-drawer-layout>
+
+</template>
+
+<script>
+
+  Polymer({
+
+    is: 'main-app',
+
+    properties: {
+      route: {
+        type: Object
+      },
+      lodingData:{
+        type: Boolean,
+        value: false
+      }
+    },
+
+    attached: function(){
+      var self = this;
+
+      if(!self.route.path)
+        return self.set('route.path','/main');
+
+
+    },
+
+    toastMsg: function(text){
+      if(!text)
+        return;
+      this.set('toastText',text);
+      this.$.updatedData.open();
+    },
+
+    observers: [
+    '_routePathChanged(route.path)',
+    ],
+    _makeAjax: function(event){
+      let self = this;
+      self.lodingData = true;
+      let elem = event.target;
+      event.preventDefault();
+      let url = '/send?cmd=' + elem.getAttribute('action');
+
+      fetch(url).then(function(response) {
+        let contentType = response.headers.get("content-type");
+        if(contentType && contentType.indexOf("application/json") !== -1) {
+          return response.json().then(function(json) {
+            self.lodingData = false;
+            self.toastMsg(json.msg)
+          });
+        } else {
+          self.toastMsg("Oops, we haven't got JSON!");
+          self.lodingData = false;
+        }
+      })
+
+    },
+
+    _drawerSelected: function() {
+      if (!this.$.drawer.persistent) this.$.drawer.close();
+    }
+  });
+
+  </script>
+
+</dom-module>

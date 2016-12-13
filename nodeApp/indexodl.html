@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IRobot</title>
+</head>
+<body>
+
+  <div>
+    <a href="/send?cmd=prepare">PREPARE</a>
+  </div>
+  <div>
+    <a href="/send?cmd=stop">STOP</a>
+  </div>
+  <div>
+    <a href="/send?cmd=go">GO</a>
+  </div>
+  <div>
+    <a href="/send?cmd=script">script</a>
+  </div>
+  <div>
+    <a href="/send?cmd=rotateLeft">rotateLeft</a>
+  </div>
+  <div>
+    <a href="/send?cmd=rotateRight">rotateRight</a>
+  </div>
+</body>
+
+<script type="text/javascript">
+
+  let links = document.querySelectorAll('a')
+
+  let makeAjax = (event) =>{
+    let elem = event.target;
+    event.preventDefault()
+    fetch(elem.href)
+  }
+
+  links.forEach((element, index, array) => {
+
+    element.addEventListener('click',makeAjax,true)
+
+  })
+
+</script>
+
+</html>

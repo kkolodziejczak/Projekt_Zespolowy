@@ -1,0 +1,29 @@
+{
+  "name": "whyZut",
+  "authors": [
+    "Kuba Szalaty <nnaisur@gmail.com>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "iron-elements": "*",
+    "paper-elements": "*",
+    "platinum-elements": "*",
+    "neon-elements": "*",
+    "iron-swipeable-pages": "*",
+    "jquery": "^3.1.1",
+    "moment": "^2.15.2",
+    "app-elements": "^0.10.0",
+    "paper-date-picker": "https://github.com/bendavis78/paper-date-picker.git#^1.2.0"
+  }
+}
