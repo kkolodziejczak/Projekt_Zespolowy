@@ -195,7 +195,7 @@ function sendCommand(line,done){
 
   for (let i = 0; i < line.length; i++) {
 
-    let cmds = line.split(' ')
+    let cmds = line[i].split(' ')
     let count = cmds.length
     let send = new Buffer(count)
 
