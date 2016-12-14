@@ -99,20 +99,8 @@ port.open((err) => {
 
     sendCommand([SONG,PLAYSONG, DRIVEMODE],() =>{
       console.log('Przygotowano')
-      sendCommand([DRIVEMODE], ()=>{
-        sendCommand(rotateLeft)
+      sendCommand([DRIVEMODE])
 
-        setTimeout(()=>{
-          sendCommand(rotateRight)
-
-          setTimeout(()=>{
-            sendCommand(STOP)
-          },500)
-
-        },500)
-
-
-      })
     })
 
   })
