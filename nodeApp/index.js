@@ -99,8 +99,6 @@ port.open((err) => {
 
     sendCommand([SONG,PLAYSONG, DRIVEMODE],() =>{
       console.log('Przygotowano')
-      sendCommand([DRIVEMODE])
-
     })
 
   })
