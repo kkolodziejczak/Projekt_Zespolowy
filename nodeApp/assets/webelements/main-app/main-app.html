@@ -326,9 +326,9 @@
         <!-- nav menu -->
         <paper-listbox attr-for-selected="route" selected="{{route.path}}"  on-iron-activate="_drawerSelected">
 
-          <paper-item route="/settings">
+          <paper-item route="/main">
             <paper-icon-button noink icon="settings"></paper-icon-button>
-            Ustawienia
+            Sterowanie
           </paper-item>
 
           <paper-item route="/about">
@@ -348,7 +348,7 @@
           <app-header condenses effects="waterfall" fixed>
             <app-toolbar>
               <paper-icon-button noink icon="menu" drawer-toggle></paper-icon-button>
-              <div main-title> Ustawienia  </div>
+              <div main-title> Sterowanie  </div>
             </app-toolbar>
             <paper-progress class="progress-bar" indeterminate bottom-item hidden$="[[!lodingData]]"></paper-progress>
 

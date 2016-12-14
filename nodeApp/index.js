@@ -20,7 +20,13 @@ const ByteLength = SerialPort.parsers.readline
 // start
 const START = '128'
 
-const PREPARE = '128 131'
+const DRIVEMODE = '128 131'
+
+const FULLMODE = '128 132'
+
+// zagraj utwor przed tym trzeba przelaczyc irobota w full mode
+const SONG = '140 0 4 62 12 66 12 69 12 74 36'
+const PLAYSONG = '141 0'
 
 // Narysuj kwadrat o boku 40 cm:
 const cmd1 = '152 61'
@@ -87,7 +93,15 @@ port.open((err) => {
   if (err)
     return console.log('Error opening port: ', err.message)
 
-  console.log('podlaczono')
+  console.log('Podlaczono')
+
+  sendCommand(FULLMODE, () => {
+
+    sendCommand([SONG,PLAYSONG, DRIVEMODE],() =>{
+      console.log('Przygotowano')
+    })
+
+  })
 
   // write errors will be emitted on the port since there is no callback to write
   // setTimeout(() =>{
@@ -156,7 +170,7 @@ app.get('/send', function (req, res) {
   else if(cmd == 'go')
     line = cmd2
   else if(cmd == 'prepare')
-    line = PREPARE
+    line = DRIVEMODE
   else if(cmd == 'script')
     line = SCRIPT
   else if(cmd == 'rotateLeft')
@@ -164,16 +178,9 @@ app.get('/send', function (req, res) {
   else if(cmd == 'rotateRight')
     line = rotateRight
 
-
-  let cmds = line.split(' ')
-  let count = cmds.length
-  let send = new Buffer(count)
-  for (var i = 0; i < cmds.length; i++) {
-    send[i] = parseInt(cmds[i])
-  }
-  port.write(send)
-
-  return res.json({msg:'cmd sent'})
+  sendCommand(line, () =>{
+    return res.json({msg:'cmd sent'})
+  })
 })
 
 app.listen(80, function () {
@@ -181,4 +188,29 @@ app.listen(80, function () {
 })
 
 
+function sendCommand(line,done){
+
+  if(typeof line === 'string')
+    line = [line]
+
+  for (let i = 0; i < line.length; i++) {
+
+    let cmds = line.split(' ')
+    let count = cmds.length
+    let send = new Buffer(count)
+
+    for (let i = 0; i < cmds.length; i++) {
+      send[i] = parseInt(cmds[i])
+    }
+
+    port.write(send)
+
+  }
+
+  if(done)
+    done()
+
+}
+
 // zrob nadawnaie sygnalow na pidy rassbery
+// napisz kuba skrypt ktory umozliwi Tobie/Wam uruchomienie/restart aplikajci nodowej
