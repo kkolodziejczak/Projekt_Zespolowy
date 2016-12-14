@@ -29,6 +29,8 @@
 <link rel="import" href="../../bower_components/iron-swipeable-pages/iron-swipeable-pages.html">
 
 <link rel="import" href="../../bower_components/paper-fab/paper-fab.html">
+<link rel="import" href="../../bower_components/paper-input/paper-textarea.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
 
 <link rel="import" href="../../bower_components/paper-progress/paper-progress.html">
 
@@ -364,6 +366,9 @@
               <paper-button max-width raised indigo on-tap="_makeAjax" action='rotateLeft' >rotateLeft</paper-button>
               <paper-button max-width raised indigo on-tap="_makeAjax" action='rotateRight' >rotateRight</paper-button>
 
+              <paper-textarea id="commandConsole" label="Command console" value="137 1 44 128 0"></paper-textarea>
+              <paper-button max-width raised indigo on-tap="_makeAjax" console="#commandConsole">Send</paper-button>
+
 
 
             </div>
@@ -464,7 +469,16 @@
       self.lodingData = true;
       let elem = event.target;
       event.preventDefault();
-      let url = '/send?cmd=' + elem.getAttribute('action');
+      let isConsole = elem.getAttribute('console');
+      let url;
+
+      if(isConsole){
+        let console  = document.querySelector(isConsole);
+        url = '/sendCmd?cmd=' + console.value.replace('\n','__');
+      }
+      else{
+        url = '/send?cmd=' + elem.getAttribute('action');
+      }
 
       fetch(url).then(function(response) {
         let contentType = response.headers.get("content-type");

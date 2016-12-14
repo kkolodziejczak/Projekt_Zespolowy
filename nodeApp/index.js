@@ -99,6 +99,19 @@ port.open((err) => {
 
     sendCommand([SONG,PLAYSONG, DRIVEMODE],() =>{
       console.log('Przygotowano')
+      sendCommand([DRIVEMODE], ()=>{
+        sendCommand(rotateLeft)
+
+        setTimeout(()=>{
+          sendCommand(rotateLeft)
+          setTimeout(()=>{
+            sendCommand(STOP)
+          },200)
+
+        },200)
+
+
+      })
     })
 
   })
@@ -159,6 +172,16 @@ app.get('/', function (req, res) {
 
 app.use('/', express.static('assets'))
 
+app.get('/sendCmd', function (req, res) {
+
+  if(!req.query.cmd) return res.json({msg:'blank cmd'})
+  let cmds = req.query.cmd.split('__')
+
+  sendCommand(cmds, () =>{
+    return res.json({msg:'cmd sent'})
+  })
+
+})
 app.get('/send', function (req, res) {
 
   if(!req.query.cmd) return res.json({msg:'blank cmd'})
