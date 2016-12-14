@@ -102,7 +102,7 @@ port.open((err) => {
       sendCommand([DRIVEMODE], ()=>{
         sendCommand(rotateLeft)
 
-        seWtTimeout(()=>{
+        setTimeout(()=>{
           sendCommand(rotateRight)
 
           setTimeout(()=>{
