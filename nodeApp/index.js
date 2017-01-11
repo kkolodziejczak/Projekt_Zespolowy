@@ -1,20 +1,13 @@
+/*
+  Ładowanie modułów
+  Jeśli występuje tu błąd należy sprawdzić czy istnieje folder: node_modules, jak go nie ma należy wykonać `npm install` w konsoli
+  */
 const SerialPort = require('serialport')
+const express = require('express')
+const app = express()
+
 const ByteLength = SerialPort.parsers.readline
 
-// const stdin = process.stdin
-// stdin.setRawMode( true )
-
-// stdin.resume()
-
-// stdin.setEncoding( 'utf8' )
-
-
-// const readline = require('readline')
-// const rl = readline.createInterface({
-//   input: process.stdin,
-//   output: process.stdout,
-//   terminal: false
-// })
 
 
 // start
@@ -28,58 +21,32 @@ const FULLMODE = '128 132'
 const SONG = '140 0 4 62 12 66 12 69 12 74 36'
 const PLAYSONG = '141 0'
 
-// Narysuj kwadrat o boku 40 cm:
-const cmd1 = '152 61'
-// jedz prosto 300 mm/s
-const cmd2 = '137 1 44 128 0'
-// czekaj na 40 cm
-const cmd3 = '156 1 144'
-// obróć się przeciwnie do zegara 300mm/s
-const cmd4 = '137 1 44 0 1'
-// czekaj na obrót 90 stopni przeciwnie do ruchu zegara
-const cmd5 = '157 0 90'
-
-// jedz prosto 40 cm 300 mm/s
-const cmd6 = '137 1 44 128 0'
-// czekaj na 40 cm
-const cmd7 = '156 1 144'
-// obróć się przeciwnie do zegara 300mm/s
-const cmd8 = '137 1 44 0 1'
-// czekaj na obrót 90 stopni przeciwnie do ruchu zegara
-const cmd9 = '157 0 90'
-
-// jedz prosto 40 cm 300 mm/s
-const cmd10 = '137 1 44 128 0'
-// czekaj na 40 cm
-const cmd11 = '156 1 144'
-// obróć się przeciwnie do zegara 300mm/s
-const cmd12 = '137 1 44 0 1'
-// czekaj na obrót 90 stopni przeciwnie do ruchu zegara
-const cmd13 = '157 0 90'
-
-// jedz prosto 40 cm 300 mm/s
-const cmd14 = '137 1 44 128 0'
-// czekaj na 40 cm
-const cmd15 = '156 1 144'
 // STOP
 const STOP = '137 0 0 0 0'
 
-// '152 17 137 1 44 128 0 156 1 144 137 1 44 0 1 157 0 90 153'
-// const RUN = '152 9 137 1 44 0 1 157 0 90 153'
-// const rotateLeft = '152 9 137 1 44 0 1 157 0 90 153'
-// const rotateRight = '152 9 137 1 44 0 1 157 0 90 153'
-// wywołaj skrypt:
+// GO
+const GO = '137 1 44 128 0'
+
 // przeciwnie wskazowki zegara powoli
 const rotateLeft = '137 1 1 0 1'
 // wskazowki zegara powoli
 const rotateRight = '137 -1 1 0 1'
 
-const SCRIPT = '153'
+// kwadrat 40x40
+const SQUARE = '152 69 137 1 44 128 0 156 1 144 137 1 44 0 1 157 0 90 137 1 44 128 0 156 1 144 137 1 44 0 1 157 0 90 137 1 44 128 0 156 1 144 137 1 44 0 1 157 0 90 137 1 44 128 0 156 1 144 137 1 44 0 1 157 0 90 137 0 0 0 0 153 153'
+// prostokata 20x80
+const RECTANGLE = '152 69 137 1 44 128 0 156 0 200 137 1 44 0 1 157 0 90 137 1 44 128 0 156 1 320 137 1 44 0 1 157 0 90 137 1 44 128 0 156 0 200 137 1 44 0 1 157 0 90 137 1 44 128 0 156 1 320 137 1 44 0 1 157 0 90 137 0 0 0 0 153 153'
 
-
+// #newCmd
+// przykład definicji nowej komendy jej uzycie jest ponizej
+// const newCmd = '137 1 44 128 0'
 
 // trzeba ustalic jaka jest sciezka do portu
 let pathToPort = '/dev/ttyUSB0'
+
+/**
+ * Połącznie się do portu szeregowego
+ */
 const port = new SerialPort(pathToPort,
   {
     autoOpen: false,
@@ -102,13 +69,6 @@ port.open((err) => {
     })
 
   })
-
-  // write errors will be emitted on the port since there is no callback to write
-  // setTimeout(() =>{
-  //   console.log('start')
-  //   port.write(START)
-  // },5000)
-
 })
 
 
@@ -116,48 +76,16 @@ port.on('data', (data)=>{
   process.stdout.write(data.toString())
 })
 
-// stdin.on( 'data', function( key ){
-//   // ctrl-c ( end of text )
-//   if ( key === '\u0003' ) {
-//     process.exit()
-//   }
-//   // write the key to stdout all normal like
-//   console.log(key)
-//   let line
-//   if(key == 's')
-//     line = STOP
-//   else if(key == 'w')
-//     line = cmd2
-//   else if(key == 'p')
-//     line = PREPARE
-//   else if(key == 'r')
-//     line = SCRIPT
-//   else if(key == 'q')
-//     line = rotateLeft
-//   else if(key == 'e')
-//     line = rotateRight
+// Ustawinie assetsów
+app.use('/', express.static('assets'))
 
-//   if(!line)
-//     return
-
-//   let cmds = line.split(' ')
-//   let count = cmds.length
-//   let send = new Buffer(count)
-//   for (var i = 0; i < cmds.length; i++) {
-//     send[i] = parseInt(cmds[i])
-//   }
-//   port.write(send)
-
-// })
-
-var express = require('express')
-var app = express()
-
+/*
+  Routing aplikacji
+ */
 app.get('/', function (req, res) {
   res.sendFile(__dirname + '/index.html')
 })
 
-app.use('/', express.static('assets'))
 
 app.get('/sendCmd', function (req, res) {
 
@@ -175,29 +103,46 @@ app.get('/send', function (req, res) {
 
   let cmd = req.query.cmd
   let line
+
   if(cmd == 'stop')
     line = STOP
   else if(cmd == 'go')
     line = cmd2
   else if(cmd == 'prepare')
     line = DRIVEMODE
-  else if(cmd == 'script')
-    line = SCRIPT
+  else if(cmd == 'square')
+    line = SQUARE
+  else if(cmd == 'rectangle')
+    line = RECTANGLE
   else if(cmd == 'rotateLeft')
     line = rotateLeft
   else if(cmd == 'rotateRight')
     line = rotateRight
+  // #newCmd
+  // przyklad dodania nowej komendy
+  // `newCmd` musi byc zdefiniowana u góry
+  // oraz `cmd` odpowiadać nowej komendzie z pliku main-app.html
+  // else if(cmd == 'newCmd')
+  //   line = newCmd
 
   sendCommand(line, () =>{
     return res.json({msg:'cmd sent'})
   })
 })
 
+/**
+ * Włącznie nasłuchiwania na porcie 80
+ */
 app.listen(80, function () {
   console.log('Example app listening on port 80!')
 })
 
-
+/**
+ * Funkcja do zamiany stringu na komendy oraz przesyłania ich do portu szeregowego
+ * @param  {[type]}   line string do przesłania z komendą
+ * @param  {Function} done callback
+ * @return {undefined}
+ */
 function sendCommand(line,done){
 
   if(typeof line === 'string')
@@ -221,6 +166,3 @@ function sendCommand(line,done){
     done()
 
 }
-
-// zrob nadawnaie sygnalow na pidy rassbery
-// napisz kuba skrypt ktory umozliwi Tobie/Wam uruchomienie/restart aplikajci nodowej

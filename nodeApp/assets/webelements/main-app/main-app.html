@@ -318,7 +318,7 @@
           <app-toolbar style="height: 64px;">
             <div class="drawer-container">
               <div class="info">
-                <div class="name">Witaj</div>
+                <div class="name">Witaj studencie!</div>
               </div>
             </div>
           </app-toolbar>
@@ -335,7 +335,7 @@
 
           <paper-item route="/about">
             <paper-icon-button noink icon="info"></paper-icon-button>
-            O mnie
+            O nas
           </paper-item>
 
         </paper-listbox>
@@ -362,9 +362,13 @@
               <paper-button max-width raised indigo on-tap="_makeAjax" action='prepare' >prepare</paper-button>
               <paper-button max-width raised red on-tap="_makeAjax" action='stop' >stop</paper-button>
               <paper-button max-width raised green on-tap="_makeAjax" action='go' >go</paper-button>
-              <paper-button max-width raised indigo on-tap="_makeAjax" action='script' >script</paper-button>
+              <paper-button max-width raised indigo on-tap="_makeAjax" action='square' >square</paper-button>
+              <paper-button max-width raised indigo on-tap="_makeAjax" action='rectangle' >rectangle</paper-button>
               <paper-button max-width raised indigo on-tap="_makeAjax" action='rotateLeft' >rotateLeft</paper-button>
               <paper-button max-width raised indigo on-tap="_makeAjax" action='rotateRight' >rotateRight</paper-button>
+              <!-- #newCMD -->
+              <!-- nalezy zmienic action newCmd  na odpowiadającą jej komende z pliku index.js-->
+              <!-- <paper-button max-width raised indigo on-tap="_makeAjax" action='newCmd' >NEW CMD</paper-button> -->
 
               <paper-textarea id="commandConsole" label="Command console" value="137 1 44 128 0"></paper-textarea>
               <paper-button max-width raised indigo on-tap="_makeAjax" console="#commandConsole">Send</paper-button>
@@ -381,20 +385,17 @@
 
           <app-header effects="waterfall resize-title blend-background parallax-background" condenses reveals>
             <app-toolbar>
-              <!-- <paper-icon-button noink icon="arrow-back"></paper-icon-button> -->
               <paper-icon-button noink icon="menu" drawer-toggle></paper-icon-button>
-              <div condensed-title>Jakub Szalaty</div>
-              <!-- <paper-icon-button noink icon="create"></paper-icon-button> -->
-              <!-- <paper-icon-button noink icon="more-vert"></paper-icon-button> -->
+              <div condensed-title>Projekt zespołowy 2016 gr 311A</div>
             </app-toolbar>
             <app-toolbar class="middle"></app-toolbar>
 
-            <app-toolbar class="bottom">
-              <div main-title>Jakub Szalaty</div>
+            <app-toolbar class="bottom" style="margin-left: 278px;">
+
+              <div main-title>Projekt zespołowy 2016 gr 311A</div>
 
             </app-toolbar>
           </app-header>
-          <!-- <paper-fab icon="star"></paper-fab> -->
 
           <div class="sample-content">
             <iron-list id="itemsList" items="[[data]]" selected-items="{{selectedItems}}" selection-enabled multi-selection>
@@ -405,7 +406,7 @@
                     <a href="https://github.com/nnaisur" target="_blank">
 
                       <div class="primary">
-                        Github
+                        Wsparcie
                       </div>
                       <div class="secondary dim">https://github.com/nnaisur</div>
 
@@ -446,59 +447,59 @@
     },
 
     attached: function(){
-      var self = this;
+      const self = this
 
       if(!self.route.path)
-        return self.set('route.path','/main');
+        return self.set('route.path','/main')
 
 
     },
 
     toastMsg: function(text){
       if(!text)
-        return;
-      this.set('toastText',text);
-      this.$.updatedData.open();
+        return
+      this.set('toastText',text)
+      this.$.updatedData.open()
     },
 
     observers: [
-    '_routePathChanged(route.path)',
+      '_routePathChanged(route.path)',
     ],
     _makeAjax: function(event){
-      let self = this;
-      self.lodingData = true;
-      let elem = event.target;
-      event.preventDefault();
-      let isConsole = elem.getAttribute('console');
-      let url;
+      let self = this
+      self.lodingData = true
+      let elem = event.target
+      event.preventDefault()
+      let isConsole = elem.getAttribute('console')
+      let url
 
       if(isConsole){
-        let console  = document.querySelector(isConsole);
-        url = '/sendCmd?cmd=' + console.value.replace('\n','__');
+        let console  = document.querySelector(isConsole)
+        url = '/sendCmd?cmd=' + console.value.replace('\n','__')
       }
       else{
-        url = '/send?cmd=' + elem.getAttribute('action');
+        url = '/send?cmd=' + elem.getAttribute('action')
       }
 
       fetch(url).then(function(response) {
-        let contentType = response.headers.get("content-type");
-        if(contentType && contentType.indexOf("application/json") !== -1) {
+        let contentType = response.headers.get('content-type')
+        if(contentType && contentType.indexOf('application/json') !== -1) {
           return response.json().then(function(json) {
-            self.lodingData = false;
-            self.toastMsg(json.msg)
-          });
+            self.lodingData = false
+            // self.toastMsg(json.msg)
+          })
         } else {
-          self.toastMsg("Oops, we haven't got JSON!");
-          self.lodingData = false;
+          self.toastMsg(`${response.statusText} Check console`)
+          self.lodingData = false
         }
       })
 
     },
 
     _drawerSelected: function() {
-      if (!this.$.drawer.persistent) this.$.drawer.close();
+      if (!this.$.drawer.persistent) this.$.drawer.close()
     }
-  });
+  })
 
   </script>
 
