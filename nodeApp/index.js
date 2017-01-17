@@ -37,6 +37,9 @@ const SQUARE = '152 69 137 1 44 128 0 156 1 144 137 1 44 0 1 157 0 90 137 1 44 1
 // prostokata 20x80
 const RECTANGLE = '152 69 137 1 44 128 0 156 0 200 137 1 44 0 1 157 0 90 137 1 44 128 0 156 1 320 137 1 44 0 1 157 0 90 137 1 44 128 0 156 0 200 137 1 44 0 1 157 0 90 137 1 44 128 0 156 1 320 137 1 44 0 1 157 0 90 137 0 0 0 0 153 153'
 
+const TRIANGLE = '152 62 137 1 44 0 1 157 0 60 137 1 44 128 0 156 1 144 137 1 44 0 1 157 0 120 137 1 44 128 0 156 1 144 137 1 44 0 1 157 0 120 137 1 44 128 0 156 1 144 137 1 44 0 1 157 0 120 137 0 0 0 0 153'
+const CIRCLE = '152 13 137 1 44 0 200 156 4 232 137 0 0 0 0 153'
+
 // #newCmd
 // przykład definicji nowej komendy jej uzycie jest ponizej
 // const newCmd = '137 1 44 128 0'
@@ -114,6 +117,10 @@ app.get('/send', function (req, res) {
     line = SQUARE
   else if(cmd == 'rectangle')
     line = RECTANGLE
+  else if(cmd == 'circle')
+    line = CIRCLE
+  else if(cmd == 'triangle')
+    line = TRIANGLE
   else if(cmd == 'rotateLeft')
     line = rotateLeft
   else if(cmd == 'rotateRight')
