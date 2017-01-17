@@ -107,7 +107,7 @@ app.get('/send', function (req, res) {
   if(cmd == 'stop')
     line = STOP
   else if(cmd == 'go')
-    line = cmd2
+    line = GO
   else if(cmd == 'prepare')
     line = DRIVEMODE
   else if(cmd == 'square')
