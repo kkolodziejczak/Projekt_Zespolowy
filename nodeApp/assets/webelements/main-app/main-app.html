@@ -84,6 +84,11 @@
         background-color: var(--google-green-500);
         color: white;
       }
+      @media (min-width: 641px) {
+        .dynamic-margin{
+          margin-left: 278px;
+        }
+      }
     </style>
 
 
@@ -364,7 +369,8 @@
               <paper-button max-width raised green on-tap="_makeAjax" action='go' >go</paper-button>
               <paper-button max-width raised indigo on-tap="_makeAjax" action='square' >square</paper-button>
               <paper-button max-width raised indigo on-tap="_makeAjax" action='rectangle' >rectangle</paper-button>
-              <paper-button max-width raised indigo on-tap="_makeAjax" action='triangle' >triangle</paper-button>
+              <!-- nie dziala -->
+              <!-- <paper-button max-width raised indigo on-tap="_makeAjax" action='triangle' >triangle</paper-button> -->
               <paper-button max-width raised indigo on-tap="_makeAjax" action='circle' >circle</paper-button>
               <paper-button max-width raised indigo on-tap="_makeAjax" action='rotateLeft' >rotateLeft</paper-button>
               <paper-button max-width raised indigo on-tap="_makeAjax" action='rotateRight' >rotateRight</paper-button>
@@ -392,7 +398,7 @@
             </app-toolbar>
             <app-toolbar class="middle"></app-toolbar>
 
-            <app-toolbar class="bottom" style="margin-left: 278px;">
+            <app-toolbar class="bottom dynamic-margin">
 
               <div main-title>Projekt zespołowy 2016 gr 311A</div>
 
@@ -411,6 +417,22 @@
                         Wsparcie
                       </div>
                       <div class="secondary dim">https://github.com/nnaisur</div>
+
+                    </a>
+                  </div>
+                </div>
+                <div class="border"></div>
+              </div>
+
+              <div class="item-outer">
+                <div class="item">
+                  <div class="pad">
+                    <a href="https://github.com/Themiak/Projekt_Zespolowy" target="_blank">
+
+                      <div class="primary">
+                        Repozytorium
+                      </div>
+                      <div class="secondary dim">https://github.com/Themiak/Projekt_Zespolowy</div>
 
                     </a>
                   </div>

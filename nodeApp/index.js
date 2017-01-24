@@ -119,8 +119,9 @@ app.get('/send', function (req, res) {
     line = RECTANGLE
   else if(cmd == 'circle')
     line = CIRCLE
-  else if(cmd == 'triangle')
-    line = TRIANGLE
+  // nie dziala
+  // else if(cmd == 'triangle')
+  //   line = TRIANGLE
   else if(cmd == 'rotateLeft')
     line = rotateLeft
   else if(cmd == 'rotateRight')
