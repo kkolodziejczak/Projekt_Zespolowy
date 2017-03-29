@@ -477,6 +477,7 @@
         return self.set('route.path','/main')
 
 
+
     },
 
     toastMsg: function(text){
@@ -490,33 +491,41 @@
       '_routePathChanged(route.path)',
     ],
     _makeAjax: function(event){
-      let self = this
+      const self = this
       self.lodingData = true
-      let elem = event.target
+      const elem = event.target
       event.preventDefault()
-      let isConsole = elem.getAttribute('console')
+      const isConsole = elem.getAttribute('console')
       let url
+      let cmd
 
       if(isConsole){
-        let console  = document.querySelector(isConsole)
-        url = '/sendCmd?cmd=' + console.value.replace('\n','__')
+        const console  = document.querySelector(isConsole)
+        // url = '/sendCmd?cmd=' + console.value.replace('\n','__')
+        cmd = console.value.replace('\n','__')
       }
       else{
-        url = '/send?cmd=' + elem.getAttribute('action')
+        // url = '/send?cmd=' + elem.getAttribute('action')
+        cmd = elem.getAttribute('action')
       }
 
-      fetch(url).then(function(response) {
-        let contentType = response.headers.get('content-type')
-        if(contentType && contentType.indexOf('application/json') !== -1) {
-          return response.json().then(function(json) {
-            self.lodingData = false
-            // self.toastMsg(json.msg)
-          })
-        } else {
-          self.toastMsg(`${response.statusText} Check console`)
+      socket.emit('sendCmd', cmd)
+      socket.on('sent', (data) => {
           self.lodingData = false
-        }
       })
+      // console.log(cmd)
+      // fetch(url).then(function(response) {
+      //   const contentType = response.headers.get('content-type')
+      //   if(contentType && contentType.indexOf('application/json') !== -1) {
+      //     return response.json().then(function(json) {
+      //       self.lodingData = false
+      //       // self.toastMsg(json.msg)
+      //     })
+      //   } else {
+      //     self.toastMsg(`${response.statusText} Check console`)
+      //     self.lodingData = false
+      //   }
+      // })
 
     },
 

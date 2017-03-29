@@ -22,3 +22,5 @@ npm start
 - zamiana z http req na socket
 - panel administracyjny by mozna kogos wyrzucic zablokowc
 - kolejka osob ktore moga wysylac komendy
+- naprawic rysowanie trojkata(moze liczba bajtow sie nie zgadza)
+- wylaczyc autofocus na input
