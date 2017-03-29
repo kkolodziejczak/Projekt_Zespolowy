@@ -1,3 +1,5 @@
+'use strict'
+
 /*
   Ładowanie modułów
   Jeśli występuje tu błąd należy sprawdzić czy istnieje folder: node_modules, jak go nie ma należy wykonać `npm install` w konsoli
@@ -5,6 +7,9 @@
 const SerialPort = require('serialport')
 const express = require('express')
 const app = express()
+
+const server = require('http').Server(app)
+const io = require('socket.io')(server)
 
 const ByteLength = SerialPort.parsers.readline
 
@@ -141,8 +146,21 @@ app.get('/send', function (req, res) {
 /**
  * Włącznie nasłuchiwania na porcie 80
  */
-app.listen(80, function () {
-    console.log('Example app listening on port 80!')
+server.listen(80)
+// .on('request', (req, res) => {
+//     console.log(`${new Date().toISOString().replace(/T|Z/g, ' ')}: ${res.req.method} : ${res.req.url} `)
+// })
+
+/**
+ * Ustawienie socket io
+ */
+io.on('connection', (socket) => {
+
+    socket.emit('wellcome', { hello: 'world' })
+
+    socket.on('my other event', (data) => {
+        console.log(data)
+    })
 })
 
 /**
