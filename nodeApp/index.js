@@ -51,98 +51,98 @@ let pathToPort = '/dev/ttyUSB0'
  * Połącznie się do portu szeregowego
  */
 const port = new SerialPort(pathToPort,
-  {
-    autoOpen: false,
-    baudRate: 57600,
-    databits: 8,
-    parity: 'none',
-    parser: SerialPort.parsers.raw
-  })
-
-port.open((err) => {
-  if (err)
-    return console.log('Error opening port: ', err.message)
-
-  console.log('Podlaczono')
-
-  sendCommand(FULLMODE, () => {
-
-    sendCommand([SONG,PLAYSONG, DRIVEMODE],() =>{
-      console.log('Przygotowano')
+    {
+        autoOpen: false,
+        baudRate: 57600,
+        databits: 8,
+        parity: 'none',
+        parser: SerialPort.parsers.raw
     })
 
-  })
+port.open((err) => {
+    if (err)
+        return console.log('Error opening port: ', err.message)
+
+    console.log('Podlaczono')
+
+    sendCommand(FULLMODE, () => {
+
+        sendCommand([SONG, PLAYSONG, DRIVEMODE], () => {
+            console.log('Przygotowano')
+        })
+
+    })
 })
 
 
-port.on('data', (data)=>{
-  process.stdout.write(data.toString())
+port.on('data', (data) => {
+    process.stdout.write(data.toString())
 })
 
 // Ustawinie assetsów
-app.use('/', express.static('assets'))
+app.use('/assets', express.static('assets'))
 
 /*
   Routing aplikacji
  */
 app.get('/', function (req, res) {
-  res.sendFile(__dirname + '/index.html')
+    res.sendFile(__dirname + '/index.html')
 })
 
 
 app.get('/sendCmd', function (req, res) {
 
-  if(!req.query.cmd) return res.json({msg:'blank cmd'})
-  let cmds = req.query.cmd.split('__')
+    if (!req.query.cmd) return res.json({ msg: 'blank cmd' })
+    let cmds = req.query.cmd.split('__')
 
-  sendCommand(cmds, () =>{
-    return res.json({msg:'cmd sent'})
-  })
+    sendCommand(cmds, () => {
+        return res.json({ msg: 'cmd sent' })
+    })
 
 })
 app.get('/send', function (req, res) {
 
-  if(!req.query.cmd) return res.json({msg:'blank cmd'})
+    if (!req.query.cmd) return res.json({ msg: 'blank cmd' })
 
-  let cmd = req.query.cmd
-  let line
+    let cmd = req.query.cmd
+    let line
 
-  if(cmd == 'stop')
-    line = STOP
-  else if(cmd == 'go')
-    line = GO
-  else if(cmd == 'prepare')
-    line = DRIVEMODE
-  else if(cmd == 'square')
-    line = SQUARE
-  else if(cmd == 'rectangle')
-    line = RECTANGLE
-  else if(cmd == 'circle')
-    line = CIRCLE
-  // nie dziala
-  // else if(cmd == 'triangle')
-  //   line = TRIANGLE
-  else if(cmd == 'rotateLeft')
-    line = rotateLeft
-  else if(cmd == 'rotateRight')
-    line = rotateRight
-  // #newCmd
-  // przyklad dodania nowej komendy
-  // `newCmd` musi byc zdefiniowana u góry
-  // oraz `cmd` odpowiadać nowej komendzie z pliku main-app.html
-  // else if(cmd == 'newCmd')
-  //   line = newCmd
+    if (cmd == 'stop')
+        line = STOP
+    else if (cmd == 'go')
+        line = GO
+    else if (cmd == 'prepare')
+        line = DRIVEMODE
+    else if (cmd == 'square')
+        line = SQUARE
+    else if (cmd == 'rectangle')
+        line = RECTANGLE
+    else if (cmd == 'circle')
+        line = CIRCLE
+    // nie dziala
+    // else if(cmd == 'triangle')
+    //   line = TRIANGLE
+    else if (cmd == 'rotateLeft')
+        line = rotateLeft
+    else if (cmd == 'rotateRight')
+        line = rotateRight
+    // #newCmd
+    // przyklad dodania nowej komendy
+    // `newCmd` musi byc zdefiniowana u góry
+    // oraz `cmd` odpowiadać nowej komendzie z pliku main-app.html
+    // else if(cmd == 'newCmd')
+    //   line = newCmd
 
-  sendCommand(line, () =>{
-    return res.json({msg:'cmd sent'})
-  })
+    sendCommand(line, () => {
+        return res.json({ msg: 'cmd sent' })
+    })
 })
 
 /**
  * Włącznie nasłuchiwania na porcie 80
  */
 app.listen(80, function () {
-  console.log('Example app listening on port 80!')
+    console.log('Example app listening on port 80!')
 })
 
 /**
@@ -151,26 +151,26 @@ app.listen(80, function () {
  * @param  {Function} done callback
  * @return {undefined}
  */
-function sendCommand(line,done){
+function sendCommand(line, done) {
 
-  if(typeof line === 'string')
-    line = [line]
+    if (typeof line === 'string')
+        line = [line]
 
-  for (let i = 0; i < line.length; i++) {
+    for (let i = 0; i < line.length; i++) {
 
-    let cmds = line[i].split(' ')
-    let count = cmds.length
-    let send = new Buffer(count)
+        let cmds = line[i].split(' ')
+        let count = cmds.length
+        let send = new Buffer(count)
 
-    for (let i = 0; i < cmds.length; i++) {
-      send[i] = parseInt(cmds[i])
+        for (let i = 0; i < cmds.length; i++) {
+            send[i] = parseInt(cmds[i])
+        }
+
+        port.write(send)
+
     }
 
-    port.write(send)
-
-  }
-
-  if(done)
-    done()
+    if (done)
+        done()
 
 }
