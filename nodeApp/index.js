@@ -82,7 +82,7 @@ port.open((err) => {
 
 
 port.on('data', (data) => {
-    process.stdout.write(Number(data))
+    process.stdout.write(data)
     process.stdout.write(data.toString())
 })
 
