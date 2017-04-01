@@ -6,7 +6,7 @@
 // counter-clockwise 0001, 1
 const MAXLENGHT = 100
 const STRAIGHT = 32768
-const RIGHT = 65535
+const RIGHT = -65535
 const LEFT = 1
 const BATTERYLIFE = 25
 const MAXBATTERY = 26
@@ -14,8 +14,11 @@ const MAXBATTERY = 26
 let bytes = 0
 
 function wysokiNiskiByte(liczba) {
+    // console.log('Test: '+ liczba)
     let h = (liczba & 0xFF00) >> 8
     let l = liczba & 0x00FF
+    // console.log('Test hl: '+ h + l)
+
     return h + ' ' + l
 }
 
@@ -26,7 +29,22 @@ function Drive(speedInMmPerSec, Rotation) {
     line += ' ' + wysokiNiskiByte(Rotation)
     return line
 }
+// 152 69 
+// 137 1 44 128 0 
+// 156 0 200 
+// 137 1 44 0 1 
+// 157 0 90 
+// 137 1 44 128 0 
+// 156 1 320 
+// 137 1 44 0 1
 
+// 152 24 
+// 137 1 44 128 0 
+// 156 0 100 
+// 137 1 44 0 1
+//  157 0 90
+//  137 1 44 128 0
+//  156 1 44
 function WaitForDistanceMm(distance) {
     bytes += 3
     let line = ' ' + 156
@@ -56,7 +74,6 @@ function WaitForAngle(angleInDegrees) {
 }
 
 function RepeatScript() {
-    bytes += 1
     let line = ' ' + 153
     return line
 }
@@ -83,7 +100,7 @@ function GetPacket(PacketID) {
     return line
 }
 
-function StartDocking() {
+function StartDocking(){
     return '143'
 }
 
@@ -91,7 +108,7 @@ const Skrypt = ['']
 
 function generateScriptString() {
     let SLen = Skrypt.length
-    let scriptLine = '153'
+    let scriptLine = '152'
     scriptLine += ' ' + bytes
     for (let i = 0; i < SLen; i++) {
         scriptLine += Skrypt[i]
@@ -102,13 +119,15 @@ function generateScriptString() {
 
 
 Skrypt.push(Drive(300, STRAIGHT))
-Skrypt.push(WaitForDistanceCm(10))
-Skrypt.push(Drive(100, RIGHT))
+Skrypt.push(WaitForDistanceMm(400))
+Skrypt.push(Drive(300, RIGHT))
 Skrypt.push(WaitForAngle(90))
-Skrypt.push(RepeatScript())
+Skrypt.push(Drive(300, STRAIGHT))
+Skrypt.push(WaitForDistanceMm(300))
 
 
 
 
-// Wysoki i niski bit
+
+// Wysoki i niski bi t
 console.log(generateScriptString())
