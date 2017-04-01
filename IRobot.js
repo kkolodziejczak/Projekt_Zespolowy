@@ -6,7 +6,7 @@
 // counter-clockwise 0001, 1
 const MAXLENGHT = 100
 const STRAIGHT = 32768
-const RIGHT = -65535
+const RIGHT = 65535
 const LEFT = 1
 const BATTERYLIFE = 25
 const MAXBATTERY = 26
@@ -104,6 +104,15 @@ function StartDocking(){
     return '143'
 }
 
+function Stop(){
+    Skrypt.push(Drive(0,0))
+}
+
+function Repeat(){
+    bytes += 1
+    Skrypt.push(' ' + 153)
+}
+
 const Skrypt = ['']
 
 function generateScriptString() {
@@ -113,21 +122,33 @@ function generateScriptString() {
     for (let i = 0; i < SLen; i++) {
         scriptLine += Skrypt[i]
     }
+    scriptLine += ' ' + 153
     return scriptLine
 }
 
+function DriveForward(speedInMmPerSec, distanceInCM){
+    Skrypt.push(Drive(speedInMmPerSec, STRAIGHT))
+    Skrypt.push(WaitForDistanceMm(distanceInCM*10))
+}
+
+function RotateRight(speedInMmPerSec, Angle){
+    Skrypt.push(Drive(speedInMmPerSec, RIGHT))
+    Skrypt.push(WaitForAngle(-Angle))
+}
+
+function RotateLeft(speedInMmPerSec, Angle){
+    Skrypt.push(Drive(speedInMmPerSec, LEFT))
+    Skrypt.push(WaitForAngle(Angle))
+}
 
 
-Skrypt.push(Drive(300, STRAIGHT))
-Skrypt.push(WaitForDistanceMm(400))
-Skrypt.push(Drive(300, RIGHT))
-Skrypt.push(WaitForAngle(90))
-Skrypt.push(Drive(300, STRAIGHT))
-Skrypt.push(WaitForDistanceMm(300))
-
-
-
-
+//INTERFEJS
+DriveForward(100,10)
+RotateLeft(100,5)
+DriveForward(500,10)
+RotateRight(100,90)
+Stop()
+Repeat()
 
 // Wysoki i niski bi t
 console.log(generateScriptString())
