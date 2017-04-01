@@ -495,6 +495,7 @@
       self.lodingData = true
       const elem = event.target
       event.preventDefault()
+
       const isConsole = elem.getAttribute('console')
       let url
       let cmd
@@ -503,13 +504,13 @@
         const console  = document.querySelector(isConsole)
         // url = '/sendCmd?cmd=' + console.value.replace('\n','__')
         cmd = console.value.replace('\n','__')
-      }
-      else{
+        socket.emit('sendCmd', cmd)
+      }else{
         // url = '/send?cmd=' + elem.getAttribute('action')
         cmd = elem.getAttribute('action')
+        socket.emit('send', cmd)
       }
 
-      socket.emit('sendCmd', cmd)
       socket.on('sent', (data) => {
           self.lodingData = false
       })

@@ -4,6 +4,7 @@
   Ładowanie modułów
   Jeśli występuje tu błąd należy sprawdzić czy istnieje folder: node_modules, jak go nie ma należy wykonać `npm install` w konsoli
   */
+const PORT = 80
 const SerialPort = require('serialport')
 const express = require('express')
 const app = express()
@@ -94,59 +95,10 @@ app.get('/', function (req, res) {
     res.sendFile(__dirname + '/index.html')
 })
 
-
-app.get('/sendCmd', function (req, res) {
-
-    if (!req.query.cmd) return res.json({ msg: 'blank cmd' })
-    let cmds = req.query.cmd.split('__')
-
-    sendCommand(cmds, () => {
-        return res.json({ msg: 'cmd sent' })
-    })
-
-})
-app.get('/send', function (req, res) {
-
-    if (!req.query.cmd) return res.json({ msg: 'blank cmd' })
-
-    let cmd = req.query.cmd
-    let line
-
-    if (cmd == 'stop')
-        line = STOP
-    else if (cmd == 'go')
-        line = GO
-    else if (cmd == 'prepare')
-        line = DRIVEMODE
-    else if (cmd == 'square')
-        line = SQUARE
-    else if (cmd == 'rectangle')
-        line = RECTANGLE
-    else if (cmd == 'circle')
-        line = CIRCLE
-    // nie dziala
-    // else if(cmd == 'triangle')
-    //   line = TRIANGLE
-    else if (cmd == 'rotateLeft')
-        line = rotateLeft
-    else if (cmd == 'rotateRight')
-        line = rotateRight
-    // #newCmd
-    // przyklad dodania nowej komendy
-    // `newCmd` musi byc zdefiniowana u góry
-    // oraz `cmd` odpowiadać nowej komendzie z pliku main-app.html
-    // else if(cmd == 'newCmd')
-    //   line = newCmd
-
-    sendCommand(line, () => {
-        return res.json({ msg: 'cmd sent' })
-    })
-})
-
 /**
  * Włącznie nasłuchiwania na porcie 80
  */
-server.listen(80)
+server.listen(PORT)
 // .on('request', (req, res) => {
 //     console.log(`${new Date().toISOString().replace(/T|Z/g, ' ')}: ${res.req.method} : ${res.req.url} `)
 // })
@@ -159,16 +111,53 @@ io.on('connection', (socket) => {
     socket.emit('wellcome', { hello: 'world' })
 
 
-    socket.on('sendCmd', (data) => {
-        // console.log(data)
-        let cmds = data.split('__')
+    socket.on('sendCmd', (cmd) => {
+        if (!cmd) return socket.emit('sent', { msg: 'blank cmd' })
+        let cmds = cmd.split('__')
 
         try {
             sendCommand(cmds, () => {
-                socket.emit('sent')
+                socket.emit('sent', { msg: 'cmd sent' })
             })
         } catch (err) {
-            socket.emit('sent')
+            socket.emit('sent', { msg: err })
+        }
+
+    })
+    socket.on('send', (cmd) => {
+        let line
+
+        if (cmd == 'stop')
+            line = STOP
+        else if (cmd == 'go')
+            line = GO
+        else if (cmd == 'prepare')
+            line = DRIVEMODE
+        else if (cmd == 'square')
+            line = SQUARE
+        else if (cmd == 'rectangle')
+            line = RECTANGLE
+        else if (cmd == 'circle')
+            line = CIRCLE
+        else if (cmd == 'triangle')
+            line = TRIANGLE
+        else if (cmd == 'rotateLeft')
+            line = rotateLeft
+        else if (cmd == 'rotateRight')
+            line = rotateRight
+        // #newCmd
+        // przyklad dodania nowej komendy
+        // `newCmd` musi byc zdefiniowana u góry
+        // oraz `cmd` odpowiadać nowej komendzie z pliku main-app.html
+        // else if(cmd == 'newCmd')
+        //   line = newCmd
+
+        try {
+            sendCommand(line, () => {
+                socket.emit('sent', { msg: 'cmd sent' })
+            })
+        } catch (err) {
+            socket.emit('sent', { msg: err })
         }
     })
 
