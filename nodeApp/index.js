@@ -83,7 +83,7 @@ port.open((err) => {
 
 port.on('data', (data) => {
     process.stdout.write(data)
-    process.stdout.write(data.toString())
+    // process.stdout.write(data.toString())
 })
 
 // Ustawinie assetsów
