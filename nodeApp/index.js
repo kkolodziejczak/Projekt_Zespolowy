@@ -28,15 +28,20 @@ const SONG = '140 0 4 62 12 66 12 69 12 74 36'
 const PLAYSONG = '141 0'
 
 // STOP
-const STOP = '137 0 0 0 0'
+// const STOP = '137 0 0 0 0'
+const STOP = '152 5 137 0 0 0 0 153'
 
 // GO
 const GO = '137 1 44 128 0'
 
 // przeciwnie wskazowki zegara powoli
-const rotateLeft = '137 1 1 0 1'
+// const rotateLeft = '137 1 1 0 1'
+const rotateLeft = '152 13 137 0 100 0 1 157 0 5 137 0 0 0 0 153'
+
 // wskazowki zegara powoli
-const rotateRight = '137 -1 1 0 1'
+// const rotateRight = '137 -1 1 0 1'
+const rotateRight = '152 13 137 0 100 255 255 157 255 251 137 0 0 0 0 153'
+
 
 // kwadrat 40x40
 const SQUARE = '152 68 137 1 44 128 0 156 1 144 137 1 44 0 1 157 0 90 137 1 44 128 0 156 1 144 137 1 44 0 1 157 0 90 137 1 44 128 0 156 1 144 137 1 44 0 1 157 0 90 137 1 44 128 0 156 1 144 137 1 44 0 1 157 0 90 137 0 0 0 0 153'
