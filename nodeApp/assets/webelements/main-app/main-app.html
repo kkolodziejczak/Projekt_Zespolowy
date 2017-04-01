@@ -26,11 +26,16 @@
 <link rel="import" href="../../bower_components/paper-date-picker/paper-date-picker.html">
 
 <link rel="import" href="../../bower_components/paper-tabs/paper-tabs.html">
+
+<link rel="import" href="../../bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
+<link rel="import" href="../../bower_components/paper-checkbox/paper-checkbox.html">
+
 <link rel="import" href="../../bower_components/iron-swipeable-pages/iron-swipeable-pages.html">
 
 <link rel="import" href="../../bower_components/paper-fab/paper-fab.html">
 <link rel="import" href="../../bower_components/paper-input/paper-textarea.html">
 <link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../bower_components/paper-input/paper-input.html">
 
 <link rel="import" href="../../bower_components/paper-progress/paper-progress.html">
 
@@ -58,34 +63,41 @@
         /*szybki fix*/
         z-index: -1;
       }
-      .content paper-card{
+
+      .content paper-card {
         margin-bottom: 8px;
       }
-      .content paper-card:last-child{
+
+      .content paper-card:last-child {
         margin-bottom: 0px;
       }
 
-      .setting-content{
+      .setting-content {
         padding: 0 8px;
       }
-      paper-button[max-width]{
+
+      paper-button[max-width] {
         width: 100%;
         margin: 0 0 8px 0;
       }
+
       paper-button[indigo] {
         background-color: var(--paper-indigo-500);
         color: white;
       }
+
       paper-button[red] {
         background-color: var(--google-red-500);
         color: white;
       }
+
       paper-button[green] {
         background-color: var(--google-green-500);
         color: white;
       }
+
       @media (min-width: 641px) {
-        .dynamic-margin{
+        .dynamic-margin {
           margin-left: 278px;
         }
       }
@@ -93,8 +105,6 @@
 
 
     <style>
-
-
       app-header {
         background-color: var(--default-primary-color);
         color: #fff;
@@ -104,13 +114,15 @@
         --paper-icon-button-ink-color: white;
       }
 
-      .drawer-container{
+      .drawer-container {
         /*height: 182px;*/
       }
-      .last-check{
+
+      .last-check {
         font-size: 12px;
         text-align: center;
       }
+
       .yellow-button {
         text-transform: none;
         color: var(--accent-color);
@@ -119,23 +131,24 @@
         top: 8px;
       }
 
-      paper-date-picker{
+      paper-date-picker {
         margin: 0 auto;
         position: relative;
       }
+
       @media (max-width: 520px) {
-        paper-date-picker{
+        paper-date-picker {
           left: calc(50% - 164px);
         }
       }
 
-      paper-date-picker{
+      paper-date-picker {
         --paper-date-picker-heading: {
           display: none!important;
         }
       }
 
-      #datePickerOuter{
+      #datePickerOuter {
         transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         height: 0px;
         overflow: hidden;
@@ -148,6 +161,7 @@
       #swipePages.shadow {
         overflow: hidden;
       }
+
       #swipePages.shadow:after {
         content: "";
         position: absolute;
@@ -161,20 +175,23 @@
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         will-change: all;
       }
-      #swipePages{
+
+      #swipePages {
         min-height: calc(100vh - 64px);
       }
-      #swipePages.disabled-anim > *{
+
+      #swipePages.disabled-anim>* {
         transition: none!important;
       }
-      .progress-bar{
+
+      .progress-bar {
         display: block;
         width: 100%;
         height: 3px;
         position: absolute;
       }
-
       /*about*/
+
       .about {
         font-family: 'Roboto', 'Noto', sans-serif;
         background-color: #eee;
@@ -234,13 +251,15 @@
         font-weight: 300;
       }
 
-      .about #itemsList{
+      .about #itemsList {
         @apply(--layout-flex);
         height: calc(100vh - 276px);
       }
-      .about .item-outer{
+
+      .about .item-outer {
         position: relative!important;
       }
+
       .about .item {
         @apply(--layout-horizontal);
         cursor: pointer;
@@ -280,260 +299,301 @@
         color: gray;
       }
 
-
       .about iron-list {
         @apply(--layout-flex);
       }
 
-      [main-title]{
+      [main-title] {
         pointer-events: initial!important;
       }
-
     </style>
 
-    <iron-localstorage
-    name="userInfo"
-    value="{{user}}"
-    on-iron-localstorage-load-empty="initializeDefaultUserInfo"
-    ></iron-localstorage>
+    <iron-localstorage name="userInfo" value="{{user}}" on-iron-localstorage-load-empty="initializeDefaultUserInfo"></iron-localstorage>
 
 
 
     <app-location use-hash-as-path route="{{route}}"></app-location>
-    <app-route
-    route="{{route}}"
-    pattern="/:page"
-    data="{{routeData}}"
-    tail="{{subroute}}">
-  </app-route>
+    <app-route route="{{route}}" pattern="/:page" data="{{routeData}}" tail="{{subroute}}">
+    </app-route>
 
-  <paper-toast class="fit-bottom" id="updatedData" duration="0" text="[[toastText]]">
-    <paper-button onclick="updatedData.toggle()" class="yellow-button">Ok</paper-button>
-  </paper-toast>
+    <paper-toast class="fit-bottom" id="updatedData" duration="0" text="[[toastText]]">
+      <paper-button onclick="updatedData.toggle()" class="yellow-button">Ok</paper-button>
+    </paper-toast>
 
-  <!-- <app-scrollpos-control selected="{{activeSelected}}"></app-scrollpos-control> -->
-  <app-drawer-layout>
+    <!-- <app-scrollpos-control selected="{{activeSelected}}"></app-scrollpos-control> -->
+    <app-drawer-layout>
 
-    <app-drawer id="drawer" swipe-open>
-      <app-header-layout has-scrolling-region>
+      <app-drawer id="drawer" swipe-open>
+        <app-header-layout has-scrolling-region>
 
-        <app-header fixed>
-          <app-toolbar style="height: 128px;"></app-toolbar>
+          <app-header fixed>
+            <app-toolbar style="height: 128px;"></app-toolbar>
 
-          <app-toolbar style="height: 64px;">
-            <div class="drawer-container">
-              <div class="info">
-                <div class="name">Witaj studencie!</div>
+            <app-toolbar style="height: 64px;">
+              <div class="drawer-container">
+                <div class="info">
+                  <div class="name">Witaj studencie!</div>
+                </div>
               </div>
+            </app-toolbar>
+
+          </app-header>
+
+          <!-- nav menu -->
+          <paper-listbox attr-for-selected="route" selected="{{route.path}}" on-iron-activate="_drawerSelected">
+
+            <paper-item route="/main">
+              <paper-icon-button noink icon="settings"></paper-icon-button>
+              Sterowanie
+            </paper-item>
+
+            <paper-item route="/demo">
+              <paper-icon-button noink icon="settings"></paper-icon-button>
+              Demo
+            </paper-item>
+
+            <paper-item route="/about">
+              <paper-icon-button noink icon="info"></paper-icon-button>
+              O nas
+            </paper-item>
+
+          </paper-listbox>
+
+        </app-header-layout>
+      </app-drawer>
+
+      <app-header-layout>
+        <neon-animated-pages id="mainPages" attr-for-selected="route" selected="{{route.path}}">
+          <div route="/main">
+
+            <app-header condenses effects="waterfall" fixed>
+              <app-toolbar>
+                <paper-icon-button noink icon="menu" drawer-toggle></paper-icon-button>
+                <div main-title> Sterowanie </div>
+              </app-toolbar>
+              <paper-progress class="progress-bar" indeterminate bottom-item hidden$="[[!lodingData]]"></paper-progress>
+
+            </app-header>
+
+            <div class="content">
+              <div class="setting-content">
+                <!-- <app-login-form disabled$="[[lodingData]]"></app-login-form> -->
+                <paper-button max-width raised indigo on-tap="_makeAjax" action='prepare'>prepare</paper-button>
+                <paper-button max-width raised red on-tap="_makeAjax" action='stop'>stop</paper-button>
+                <paper-button max-width raised green on-tap="_makeAjax" action='go'>go</paper-button>
+                <paper-button max-width raised indigo on-tap="_makeAjax" action='square'>square</paper-button>
+                <paper-button max-width raised indigo on-tap="_makeAjax" action='rectangle'>rectangle</paper-button>
+                <paper-button max-width raised indigo on-tap="_makeAjax" action='triangle'>triangle</paper-button>
+                <paper-button max-width raised indigo on-tap="_makeAjax" action='circle'>circle</paper-button>
+                <paper-button max-width raised indigo on-tap="_makeAjax" action='rotateLeft'>rotateLeft</paper-button>
+                <paper-button max-width raised indigo on-tap="_makeAjax" action='rotateRight'>rotateRight</paper-button>
+                <!-- #newCMD -->
+                <!-- nalezy zmienic action newCmd  na odpowiadającą jej komende z pliku index.js-->
+                <!-- <paper-button max-width raised indigo on-tap="_makeAjax" action='newCmd' >NEW CMD</paper-button> -->
+
+                <paper-textarea id="commandConsole" label="Command console" value="137 1 44 128 0"></paper-textarea>
+                <paper-button max-width raised indigo on-tap="_makeAjax" console="#commandConsole">Send</paper-button>
+
+
+
+              </div>
+
             </div>
-          </app-toolbar>
+          </div>
 
-        </app-header>
+          <div route="/demo">
 
-        <!-- nav menu -->
-        <paper-listbox attr-for-selected="route" selected="{{route.path}}"  on-iron-activate="_drawerSelected">
+            <app-header condenses effects="waterfall" fixed>
+              <app-toolbar>
+                <paper-icon-button noink icon="menu" drawer-toggle></paper-icon-button>
+                <div main-title> Demo </div>
+              </app-toolbar>
+              <paper-progress class="progress-bar" indeterminate bottom-item hidden$="[[!lodingData]]"></paper-progress>
 
-          <paper-item route="/main">
-            <paper-icon-button noink icon="settings"></paper-icon-button>
-            Sterowanie
-          </paper-item>
+            </app-header>
 
-          <paper-item route="/about">
-            <paper-icon-button noink icon="info"></paper-icon-button>
-            O nas
-          </paper-item>
+            <div class="content">
+              <div class="setting-content">
 
-        </paper-listbox>
+                <div>
+                  <paper-button max-width raised green>Odpal</paper-button>
+                  <paper-button max-width raised red>Stop</paper-button>
+                </div>
+
+                <div>
+                  <paper-button max-width raised indigo on-tap="">Dodaj</paper-button>
+                </div>
+
+
+                <div>
+                  <paper-checkbox checked>Powtórz</paper-checkbox>
+                </div>
+
+                <div>
+                  <paper-dropdown-menu label="Akcja">
+                    <paper-listbox class="dropdown-content" selected="0">
+                      <paper-item>Jedź</paper-item>
+                      <paper-item>Obróć prawo</paper-item>
+                      <paper-item>Obróć lewo</paper-item>
+                    </paper-listbox>
+                  </paper-dropdown-menu>
+                  <!-- @TODO: max 500 predkosc-->
+                  <!-- @TODO: walidacja na dystans oraz kat-->
+                  <paper-input label="Prędkość" style="width: 100px; display: inline-block;"></paper-input>
+                  <paper-input label="Wartość" style="width: 100px; display: inline-block;"></paper-input>
+
+                </div>
+
+
+              </div>
+
+            </div>
+          </div>
+
+          <div class="about" route="/about">
+
+            <app-header effects="waterfall resize-title blend-background parallax-background" condenses reveals>
+              <app-toolbar>
+                <paper-icon-button noink icon="menu" drawer-toggle></paper-icon-button>
+                <div condensed-title>Projekt zespołowy 2016 gr 311A</div>
+              </app-toolbar>
+              <app-toolbar class="middle"></app-toolbar>
+
+              <app-toolbar class="bottom dynamic-margin">
+
+                <div main-title>Projekt zespołowy 2016 gr 311A</div>
+
+              </app-toolbar>
+            </app-header>
+
+            <div class="sample-content">
+              <iron-list id="itemsList" items="[[data]]" selected-items="{{selectedItems}}" selection-enabled multi-selection>
+
+                <div class="item-outer">
+                  <div class="item">
+                    <div class="pad">
+                      <a href="https://github.com/nnaisur" target="_blank">
+
+                        <div class="primary">
+                          Wsparcie
+                        </div>
+                        <div class="secondary dim">https://github.com/nnaisur</div>
+
+                      </a>
+                    </div>
+                  </div>
+                  <div class="border"></div>
+                </div>
+
+                <div class="item-outer">
+                  <div class="item">
+                    <div class="pad">
+                      <a href="https://github.com/Themiak/Projekt_Zespolowy" target="_blank">
+
+                        <div class="primary">
+                          Repozytorium
+                        </div>
+                        <div class="secondary dim">https://github.com/Themiak/Projekt_Zespolowy</div>
+
+                      </a>
+                    </div>
+                  </div>
+                  <div class="border"></div>
+                </div>
+
+              </iron-list>
+            </div>
+
+          </div>
+
+
+        </neon-animated-pages>
 
       </app-header-layout>
-    </app-drawer>
 
-    <app-header-layout>
-      <neon-animated-pages id="mainPages" attr-for-selected="route" selected="{{route.path}}">
-        <div route="/main">
+    </app-drawer-layout>
 
-          <app-header condenses effects="waterfall" fixed>
-            <app-toolbar>
-              <paper-icon-button noink icon="menu" drawer-toggle></paper-icon-button>
-              <div main-title> Sterowanie  </div>
-            </app-toolbar>
-            <paper-progress class="progress-bar" indeterminate bottom-item hidden$="[[!lodingData]]"></paper-progress>
+  </template>
 
-          </app-header>
+  <script>
+    Polymer({
 
-          <div class="content">
-            <div class="setting-content">
-              <!-- <app-login-form disabled$="[[lodingData]]"></app-login-form> -->
-              <paper-button max-width raised indigo on-tap="_makeAjax" action='prepare' >prepare</paper-button>
-              <paper-button max-width raised red on-tap="_makeAjax" action='stop' >stop</paper-button>
-              <paper-button max-width raised green on-tap="_makeAjax" action='go' >go</paper-button>
-              <paper-button max-width raised indigo on-tap="_makeAjax" action='square' >square</paper-button>
-              <paper-button max-width raised indigo on-tap="_makeAjax" action='rectangle' >rectangle</paper-button>
-               <paper-button max-width raised indigo on-tap="_makeAjax" action='triangle' >triangle</paper-button>
-              <paper-button max-width raised indigo on-tap="_makeAjax" action='circle' >circle</paper-button>
-              <paper-button max-width raised indigo on-tap="_makeAjax" action='rotateLeft' >rotateLeft</paper-button>
-              <paper-button max-width raised indigo on-tap="_makeAjax" action='rotateRight' >rotateRight</paper-button>
-              <!-- #newCMD -->
-              <!-- nalezy zmienic action newCmd  na odpowiadającą jej komende z pliku index.js-->
-              <!-- <paper-button max-width raised indigo on-tap="_makeAjax" action='newCmd' >NEW CMD</paper-button> -->
+      is: 'main-app',
 
-              <paper-textarea id="commandConsole" label="Command console" value="137 1 44 128 0"></paper-textarea>
-              <paper-button max-width raised indigo on-tap="_makeAjax" console="#commandConsole">Send</paper-button>
-
-
-
-            </div>
-
-          </div>
-        </div>
-
-
-        <div class="about" route="/about">
-
-          <app-header effects="waterfall resize-title blend-background parallax-background" condenses reveals>
-            <app-toolbar>
-              <paper-icon-button noink icon="menu" drawer-toggle></paper-icon-button>
-              <div condensed-title>Projekt zespołowy 2016 gr 311A</div>
-            </app-toolbar>
-            <app-toolbar class="middle"></app-toolbar>
-
-            <app-toolbar class="bottom dynamic-margin">
-
-              <div main-title>Projekt zespołowy 2016 gr 311A</div>
-
-            </app-toolbar>
-          </app-header>
-
-          <div class="sample-content">
-            <iron-list id="itemsList" items="[[data]]" selected-items="{{selectedItems}}" selection-enabled multi-selection>
-
-              <div class="item-outer">
-                <div class="item">
-                  <div class="pad">
-                    <a href="https://github.com/nnaisur" target="_blank">
-
-                      <div class="primary">
-                        Wsparcie
-                      </div>
-                      <div class="secondary dim">https://github.com/nnaisur</div>
-
-                    </a>
-                  </div>
-                </div>
-                <div class="border"></div>
-              </div>
-
-              <div class="item-outer">
-                <div class="item">
-                  <div class="pad">
-                    <a href="https://github.com/Themiak/Projekt_Zespolowy" target="_blank">
-
-                      <div class="primary">
-                        Repozytorium
-                      </div>
-                      <div class="secondary dim">https://github.com/Themiak/Projekt_Zespolowy</div>
-
-                    </a>
-                  </div>
-                </div>
-                <div class="border"></div>
-              </div>
-
-            </iron-list>
-          </div>
-
-        </div>
-
-
-      </neon-animated-pages>
-
-    </app-header-layout>
-
-  </app-drawer-layout>
-
-</template>
-
-<script>
-
-  Polymer({
-
-    is: 'main-app',
-
-    properties: {
-      route: {
-        type: Object
+      properties: {
+        route: {
+          type: Object
+        },
+        lodingData: {
+          type: Boolean,
+          value: false
+        }
       },
-      lodingData:{
-        type: Boolean,
-        value: false
-      }
-    },
 
-    attached: function(){
-      const self = this
+      attached: function () {
+        const self = this
 
-      if(!self.route.path)
-        return self.set('route.path','/main')
+        if (!self.route.path)
+          return self.set('route.path', '/main')
 
 
 
-    },
+      },
 
-    toastMsg: function(text){
-      if(!text)
-        return
-      this.set('toastText',text)
-      this.$.updatedData.open()
-    },
+      toastMsg: function (text) {
+        if (!text)
+          return
+        this.set('toastText', text)
+        this.$.updatedData.open()
+      },
 
-    observers: [
-      '_routePathChanged(route.path)',
-    ],
-    _makeAjax: function(event){
-      const self = this
-      self.lodingData = true
-      const elem = event.target
-      event.preventDefault()
+      observers: [
+        '_routePathChanged(route.path)',
+      ],
+      _makeAjax: function (event) {
+        const self = this
+        self.lodingData = true
+        const elem = event.target
+        event.preventDefault()
 
-      const isConsole = elem.getAttribute('console')
-      let url
-      let cmd
+        const isConsole = elem.getAttribute('console')
+        let url
+        let cmd
 
-      if(isConsole){
-        const console  = document.querySelector(isConsole)
-        // url = '/sendCmd?cmd=' + console.value.replace('\n','__')
-        cmd = console.value.replace('\n','__')
-        socket.emit('sendCmd', cmd)
-      }else{
-        // url = '/send?cmd=' + elem.getAttribute('action')
-        cmd = elem.getAttribute('action')
-        socket.emit('send', cmd)
-      }
+        if (isConsole) {
+          const console = document.querySelector(isConsole)
+          // url = '/sendCmd?cmd=' + console.value.replace('\n','__')
+          cmd = console.value.replace('\n', '__')
+          socket.emit('sendCmd', cmd)
+        } else {
+          // url = '/send?cmd=' + elem.getAttribute('action')
+          cmd = elem.getAttribute('action')
+          socket.emit('send', cmd)
+        }
 
-      socket.on('sent', (data) => {
+        socket.on('sent', (data) => {
           self.lodingData = false
-      })
-      // console.log(cmd)
-      // fetch(url).then(function(response) {
-      //   const contentType = response.headers.get('content-type')
-      //   if(contentType && contentType.indexOf('application/json') !== -1) {
-      //     return response.json().then(function(json) {
-      //       self.lodingData = false
-      //       // self.toastMsg(json.msg)
-      //     })
-      //   } else {
-      //     self.toastMsg(`${response.statusText} Check console`)
-      //     self.lodingData = false
-      //   }
-      // })
+        })
+        // console.log(cmd)
+        // fetch(url).then(function(response) {
+        //   const contentType = response.headers.get('content-type')
+        //   if(contentType && contentType.indexOf('application/json') !== -1) {
+        //     return response.json().then(function(json) {
+        //       self.lodingData = false
+        //       // self.toastMsg(json.msg)
+        //     })
+        //   } else {
+        //     self.toastMsg(`${response.statusText} Check console`)
+        //     self.lodingData = false
+        //   }
+        // })
 
-    },
+      },
 
-    _drawerSelected: function() {
-      if (!this.$.drawer.persistent) this.$.drawer.close()
-    }
-  })
-
+      _drawerSelected: function () {
+        if (!this.$.drawer.persistent) this.$.drawer.close()
+      }
+    })
   </script>
 
 </dom-module>
