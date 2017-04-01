@@ -38,7 +38,7 @@ const GO = '137 1 44 128 0'
 // const rotateLeft = '137 1 1 0 1'
 const rotateLeft = '152 13 137 0 100 0 1 157 0 5 137 0 0 0 0 153'
 
-// wskazowki zegara powoli
+// wskazowki zegara powoli.
 // const rotateRight = '137 -1 1 0 1'
 const rotateRight = '152 13 137 0 100 255 255 157 255 251 137 0 0 0 0 153'
 
