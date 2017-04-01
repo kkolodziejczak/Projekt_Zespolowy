@@ -108,6 +108,11 @@ function Stop(){
     Skrypt.push(Drive(0,0))
 }
 
+function Repeat(){
+    bytes += 1
+    Skrypt.push(' ' + 153)
+}
+
 const Skrypt = ['']
 
 function generateScriptString() {
@@ -136,16 +141,14 @@ function RotateLeft(speedInMmPerSec, Angle){
     Skrypt.push(WaitForAngle(Angle))
 }
 
-function Repeat(){
-    bytes += 1
-    Skrypt.push(' ' + 153)
-}
 
-
-// DriveForward(100,10)
+//INTERFEJS
+DriveForward(100,10)
 RotateLeft(100,5)
+DriveForward(500,10)
+RotateRight(100,90)
 Stop()
-// Repeat()
+Repeat()
 
 // Wysoki i niski bi t
 console.log(generateScriptString())
