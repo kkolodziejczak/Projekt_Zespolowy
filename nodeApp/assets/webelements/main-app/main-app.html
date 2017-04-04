@@ -440,8 +440,8 @@
                     </paper-dropdown-menu>
                     <!-- @TODO: max 500 predkosc-->
                     <!-- @TODO: walidacja na dystans oraz kat-->
-                    <paper-input label="Prędkość(mm/s)" value="{{item.speed}}" style="width: 100px; display: inline-block;"></paper-input>
-                    <paper-input label="Wartość" value="{{item.value}}" style="width: 100px; display: inline-block;"></paper-input>
+                    <paper-input label="Prędkość(mm/s)" type="number" min="0" value="{{item.speed}}" style="width: 100px; display: inline-block;"></paper-input>
+                    <paper-input label="Wartość" type="number" min="0" value="{{item.value}}" style="width: 100px; display: inline-block;"></paper-input>
                     <paper-button max-width raised red index="[[index]]" on-tap="removeAction">Usuń</paper-button>
 
                   </div>
@@ -539,8 +539,8 @@
           value: [
             {
               selected: 0,
-              speed: 200,
-              value: 100
+              speed: 250,
+              value: 75
             }
           ]
         }
@@ -557,7 +557,7 @@
       },
       addAction: function () {
         const actions = this.actions.slice()
-        actions.push({ selected: 0, speed: 50, value: 100 })
+        actions.push({ selected: 0, speed: 250, value: 75 })
         this.set('actions', actions)
       },
       removeAction: function (event) {
