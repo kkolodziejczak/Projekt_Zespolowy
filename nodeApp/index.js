@@ -89,7 +89,7 @@ port.open((err) => {
 
 port.on('data', (data) => {
     process.stdout.write(data)
-    console.log('data', data)
+    // console.log('data', data)
     // process.stdout.write(data.toString())
 })
 
