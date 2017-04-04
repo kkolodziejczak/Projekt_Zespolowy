@@ -28,6 +28,7 @@ const SONG = '140 0 4 62 12 66 12 69 12 74 36'
 const PLAYSONG = '141 0'
 
 // STOP
+// @TODO: wysylaj dwa stopy
 // const STOP = '137 0 0 0 0'
 const STOP = '152 5 137 0 0 0 0 153'
 
