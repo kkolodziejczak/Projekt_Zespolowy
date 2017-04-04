@@ -416,8 +416,8 @@
               <div class="setting-content">
 
                 <div>
-                  <paper-button max-width raised green on-tap="runScript">Odpal</paper-button>
-                  <paper-button max-width raised red>Stop</paper-button>
+                  <paper-button max-width raised green on-tap="runScript">Wykonaj</paper-button>
+                  <paper-button max-width raised red on-tap="_makeAjax" action='stop'>Stop</paper-button>
                 </div>
 
                 <div>
@@ -539,7 +539,7 @@
           value: [
             {
               selected: 0,
-              speed: 50,
+              speed: 200,
               value: 100
             }
           ]
