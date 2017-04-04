@@ -94,7 +94,6 @@ port.on('data', (data) => {
 })
 
 // Ustawinie assetsów
-app.use('/', express.static('assets'))
 app.use('/assets', express.static('assets'))
 
 /*
